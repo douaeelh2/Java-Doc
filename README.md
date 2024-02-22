@@ -6,9 +6,8 @@ This documentation aims to provide an overview of fundamental Java concepts nece
 ## Table of Contents
 - [What is JDK, JRE and JVM in Java](#What-is-JDK-JRE-and-JVM-in-Java)
 - [How to Execute a Java Program](#How-to-execute-a-Java-Program)
-- [Loops](#loops)
-- [Conditional Statements](#conditional-statements)
-- [Classes and Objects](#classes-and-objects)
+- [Java Basics](#Java-Basics)
+- [Java OOP](#Java-OOP)
 - [Interfaces](#interfaces)
 - [Exception Handling](#exception-handling)
 
@@ -48,10 +47,59 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    - Once the JRE is installed, run your Java program using the java command followed by the name of the class containing the main() method in your terminal or command prompt.
 
 
-## Polymorphism
-- **Overloading:**
-   - Overloading occurs when a class has multiple methods with the same name but different parameter lists. Overloaded methods can have different return types but must have different parameter lists.
+## Java OOP
+1. **Encapsulation** 
+   - Encapsulation is the mechanism of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class. It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
+     
    ```java
-   class Calculator {
-       // Example of method overloading
+   public class Car {
+    private String model;
+    private int year;
+    
+    // Constructor
+    public Car(String model, int year) {
+        this.model = model;
+        this.year = year;
+    }
+    
+    // Getter methods
+    public String getModel() {
+        return model;
+    }
+    
+    public int getYear() {
+        return year;
+    }
+    
+    // Setter methods
+    public void setModel(String model) {
+        this.model = model;
+    }
+    
+    public void setYear(int year) {
+        this.year = year;
+    }
    }
+   ```
+   
+2. **Inheritance**
+   - Inheritance is a mechanism in which a new class inherits properties and behavior (methods) from an existing class. The existing class is called the superclass or base class, and the new class is called the subclass or derived class. The subclass can reuse the fields and methods of the superclass and can also add new fields and methods or override the existing ones.
+
+   ```java
+     // Superclass
+   class Animal {
+       void eat() {
+           System.out.println("Animal is eating...");
+       }
+   }
+   
+   // Subclass inheriting from Animal
+   class Dog extends Animal {
+       void bark() {
+           System.out.println("Dog is barking...");
+       }
+   }
+
+   ```
+
+
