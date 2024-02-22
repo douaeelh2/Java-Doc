@@ -4,16 +4,16 @@
 This documentation aims to provide an overview of fundamental Java concepts necessary for working with Spring Boot.
 
 ## Table of Contents
-- [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
-- [How to Execute a Java Program](#how-to-execute-a-java-program)
-- [Java Basics](#java-basics)
-- [Java OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
-  - [Encapsulation](#encapsulation)
-  - [Inheritance](#inheritance)
-  - [Abstraction](#abstraction)
-  - [Polymorphism](#polymorphism)
-  - [Overloading and Overriding](#overloading-and-overriding)
-  - [Aggregation and Composition](#aggregation-and-composition)
+- [What is JDK, JRE and JVM in Java](#What-is-JDK-JRE-and-JVM-in-Java)
+- [How to Execute a Java Program](#How-to-Execute-a-Java-Program)
+- [Java Basics](#Java-Basics)
+- [Java OOP (Object-Oriented Programming)](#Java-OOP-Object-Oriented-Programming)
+  - [Encapsulation](#Encapsulation)
+  - [Inheritance](#Inheritance)
+  - [Abstraction](#Abstraction)
+  - [Polymorphism](#Polymorphism)
+  - [Overloading and Overriding](#Overloading-And-Overriding)
+  - [Aggregation and Composition](#Aggregation-And-Composition)
 
 
 
