@@ -51,6 +51,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 1. **Encapsulation** 
    - Encapsulation is the mechanism of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class. It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
      
+     
    ```java
    public class Car {
     private String model;
@@ -84,6 +85,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    
 2. **Inheritance**
    - Inheritance is a mechanism in which a new class inherits properties and behavior (methods) from an existing class. The existing class is called the superclass or base class, and the new class is called the subclass or derived class. The subclass can reuse the fields and methods of the superclass and can also add new fields and methods or override the existing ones.
+
 
    ```java
      // Superclass
