@@ -403,18 +403,18 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
   ```
 - `Final Class: ` When a class is declared as final, it means that it cannot be subclassed. This prevents other classes from inheriting from it.
   
- ```java
-    final class FinalClass {
-          // Class members and methods
-      }
-      
-      public class Main {
-          public static void main(String[] args) {
-              // Instantiate FinalClass
-              FinalClass obj = new FinalClass();
-              // Access methods or members of FinalClass
-          }
-      }
- ```
+   ```java
+      final class FinalClass {
+            // Class members and methods
+        }
+        
+        public class Main {
+            public static void main(String[] args) {
+                // Instantiate FinalClass
+                FinalClass obj = new FinalClass();
+                // Access methods or members of FinalClass
+            }
+        }
+   ```
 
 
