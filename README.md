@@ -49,7 +49,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 
 ## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
-   - Encapsulation is the mechanism of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class. It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
+   - Encapsulation is the mechanism of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class.
+   -  It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
      
      
    ```java
@@ -84,7 +85,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    ```
    
  ### 2. Inheritance
-   - Inheritance is a mechanism in which a new class inherits properties and behavior (methods) from an existing class. promoting code reuse, class hierarchy, and object specialization.
+   - Inheritance is a mechanism in which a new class inherits properties and behavior (methods) from an existing class.
+   - promoting code reuse, class hierarchy, and object specialization.
 
    ```java
     // Parent class
@@ -125,8 +127,11 @@ public class Main {
     }
 }
 
-
-   ```
+```
+ ### 3. Abstraction
+   - Abstraction is the process of hiding the implementation details and showing only the essential features of an object. It helps in reducing programming complexity and focusing on relevant aspects
+   - Abstract classes cannot be instantiated on their own and may contain abstract methods (methods without implementation)
+     
 ```java
   // Abstract class
 abstract class Shape {
