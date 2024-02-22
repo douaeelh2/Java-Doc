@@ -249,7 +249,15 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
     - A class can implement `multiple interfaces`, thus providing increased flexibility in program design.
     - Interfaces can be used to define types, enabling `polymorphism`.
     - Extend one or more interfaces
-    
+
+   ```java
+      // Interface
+    interface Animal {
+        void makeSound();
+    }
+
+   ```
+
    **Abstract Class**
     - An abstract class is a class that cannot be `instantiated` directly.
     - It can contain both `abstract methods` (methods without implementation) and `concrete methods` (methods with implementation).
@@ -259,15 +267,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
     - Cannot be declared `final`
     - Abstract methods should not be `private`
     - An `abstract class` can partially implement an `interface`
-      
-   ```java
-      // Interface
-    interface Animal {
-        void makeSound();
-    }
-
-  ```
-
+    
  ```java
      // Abstract class
     abstract class Vehicle {
