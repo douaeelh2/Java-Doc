@@ -1,4 +1,4 @@
-# Java Fundamentals for Spring Boot
+# Java 8 Fundamentals for Spring Boot
 
 ## Introduction
 This documentation aims to provide an overview of fundamental Java concepts necessary for working with Spring Boot.
@@ -6,8 +6,17 @@ This documentation aims to provide an overview of fundamental Java concepts nece
 ## Table of Contents
 - [What is JDK, JRE and JVM in Java](#What-is-JDK-JRE-and-JVM-in-Java)
 - [How to Execute a Java Program](#How-to-Execute-a-Java-Program)
-- [Java Basics](#Java-Basics)
-- [Java OOP (Object-Oriented Programming)](#Java-OOP-Object-Oriented-Programming)
+- [Java 8 Basics](#Java-Basics)
+  - [Java 8 Lambda Expressions]
+  - [Java 8 Functional Interfaces]
+  - [Java 8 Method References]
+  - [Java 8 Stream API]
+  - [Java 8 Optional Class]
+  - [Java 8 Collectors Class]
+  - [Java 8 StringJoiner Class]
+  - [Java 8 Static and Default Methods in Interface]
+  
+- [Java 8 OOP (Object-Oriented Programming)](#Java-OOP-Object-Oriented-Programming)
   - [Encapsulation](#Encapsulation)
   - [Inheritance](#Inheritance)
   - [Abstraction](#Abstraction)
