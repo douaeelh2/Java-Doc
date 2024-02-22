@@ -13,20 +13,26 @@ This documentation aims to provide an overview of fundamental Java concepts nece
 - [Exception Handling](#exception-handling)
 
 ## What is JDK, JRE and JVM in Java
-1. **JDK(Java Development Kit)**
+1. **JDK (Java Development Kit)**
    - The JDK(Java Development Kit) is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
+     
      
      ![Java JDK JRE and JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/ab43eb26-79a7-4936-8ace-10da5a248a51)
 
 2. **JVM (Java Virtual Machine)**
    - JVM is a very important component of Java programming language. When you run the Java program, the Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly).
    - JVM is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
+  
+     ![JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2b0cfefd-eae7-405d-8d67-be6492089df4)
+     
 
 3. **3. JRE(Java Runtime Environment)**
    - The Java Runtime Environment (JRE) provides the libraries, the Java Virtual Machine, and other components to run applets and applications written in the Java programming language.
 JRE doesn’t contain any development tools such as Java compiler, debugger, JShell, etc.
    - If you just want to execute a java program, you can install only JRE. You don’t need JDK because there is no development or compilation of java source code is required.
 
+   ![JRE](https://github.com/douaeelh2/Java-Documentation/assets/127549220/30dc98dd-e601-47c5-b516-1fa1cc03797e)
+   
 
 ## How to Execute a Java Program
 1. **Writing the Source Code:** 
