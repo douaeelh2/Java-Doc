@@ -8,12 +8,13 @@ This documentation aims to provide an overview of fundamental Java concepts nece
 - [How to Execute a Java Program](#How-to-Execute-a-Java-Program)
 - [Java Basics](#Java-Basics)
 - [Java OOP (Object-Oriented Programming)](#Java-OOP-Object-Oriented-Programming)
-  - [Encapsulation](#Encapsulation)
+  1 - [Encapsulation](#Encapsulation)
   - [Inheritance](#Inheritance)
   - [Abstraction](#Abstraction)
   - [Polymorphism](#Polymorphism)
   - [Overloading and Overriding](#Overloading-And-Overriding)
   - [Aggregation and Composition](#Aggregation-And-Composition)
+  - [Interface & Class](#Interface-&-Class)
 
 
 
