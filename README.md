@@ -4,8 +4,8 @@
 This documentation aims to provide an overview of fundamental Java concepts necessary for working with Spring Boot.
 
 ## Table of Contents
-- [What is JDK, JRE and JVM in Java](#what-is-JDK-JRE-and-JVM-in-java)
-- [How to Execute a Java Program](#how-to-execute-java-program)
+- [What is JDK, JRE and JVM in Java](#What-is-JDK-JRE-and-JVM-in-Java)
+- [How to Execute a Java Program](#How-to-execute-a-Java-Program)
 - [Loops](#loops)
 - [Conditional Statements](#conditional-statements)
 - [Classes and Objects](#classes-and-objects)
