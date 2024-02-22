@@ -1,31 +1,31 @@
 # Java 8 Fundamentals for Spring Boot
 
 ## Introduction
-This documentation aims to provide an overview of fundamental Java concepts necessary for working with Spring Boot.
+This documentation aims to provide an overview of fundamental Java 8 concepts necessary for working with Spring Boot.
 
 ## Table of Contents
-- [What is JDK, JRE and JVM in Java](#What-is-JDK-JRE-and-JVM-in-Java)
-- [How to Execute a Java Program](#How-to-Execute-a-Java-Program)
-- [Java 8 Basics](#Java-Basics)
-  - [Java 8 Lambda Expressions]
-  - [Java 8 Functional Interfaces]
-  - [Java 8 Method References]
-  - [Java 8 Stream API]
-  - [Java 8 Optional Class]
-  - [Java 8 Collectors Class]
-  - [Java 8 StringJoiner Class]
-  - [Java 8 Static and Default Methods in Interface]
-  
-- [Java 8 OOP (Object-Oriented Programming)](#Java-OOP-Object-Oriented-Programming)
-  - [Encapsulation](#Encapsulation)
-  - [Inheritance](#Inheritance)
-  - [Abstraction](#Abstraction)
-  - [Polymorphism](#Polymorphism)
-  - [Overloading and Overriding](#Overloading-And-Overriding)
-  - [Aggregation and Composition](#Aggregation-And-Composition)
-  - [Interface & Abstract Class](#Interface-&-Abstract-Class)
-  - [Static](#Static)
-  - [Final](#Final)
+- [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
+- [How to Execute a Java Program](#how-to-execute-a-java-program)
+- [Java 8 Basics](#java-basics)
+  - [Java 8 Lambda Expressions](#java-8-lambda-expressions)
+  - [Java 8 Functional Interfaces](#java-8-functional-interfaces)
+  - [Java 8 Method References](#java-8-method-references)
+  - [Java 8 Stream API](#java-8-stream-api)
+  - [Java 8 Optional Class](#java-8-optional-class)
+  - [Java 8 Collectors Class](#java-8-collectors-class)
+  - [Java 8 StringJoiner Class](#java-8-stringjoiner-class)
+  - [Java 8 Static and Default Methods in Interface](#java-8-static-and-default-methods-in-interface)
+    
+- [Java 8 OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
+  - [Encapsulation](#encapsulation)
+  - [Inheritance](#inheritance)
+  - [Abstraction](#abstraction)
+  - [Polymorphism](#polymorphism)
+  - [Overloading and Overriding](#overloading-and-overriding)
+  - [Aggregation and Composition](#aggregation-and-composition)
+  - [Interface & Abstract Class](#interface--abstract-class)
+  - [Static](#static)
+  - [Final](#final)
 
 
 ## What is JDK, JRE and JVM in Java
