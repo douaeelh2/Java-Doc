@@ -243,14 +243,14 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
 
  ### 7. Interface & Class
    #### Interface
-  - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
-  - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
-  - Classes that implement an interface must provide an `implementation` for all methods declared in that interface.
-  - A class can implement `multiple interfaces`, thus providing increased flexibility in program design.
-  - Interfaces can be used to define types, enabling `polymorphism`.
-  - Extend one or more interfaces
+    - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
+    - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
+    - Classes that implement an interface must provide an `implementation` for all methods declared in that interface.
+    - A class can implement `multiple interfaces`, thus providing increased flexibility in program design.
+    - Interfaces can be used to define types, enabling `polymorphism`.
+    - Extend one or more interfaces
     
-    #### Abstract Class
+   #### Abstract Class
     - An abstract class is a class that cannot be `instantiated` directly.
     - It can contain both `abstract methods` (methods without implementation) and `concrete methods` (methods with implementation).
     - An abstract class can have instance variables, constructors, and methods with or without implementation.
@@ -305,7 +305,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
 ```
 
 ### 8. Static & Final
-  #### Static 
+   **Static**
     - `Static Variables (Attributes): ` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class.   There will be only one copy of a static variable regardless of how many instances of the class are created. 
 
   ```java
@@ -323,8 +323,8 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
           System.out.println("obj2 static variable: " + obj2.myStaticVariable);
       }
   }
-  ```
-    - `Static Methods: ` Similarly, static methods belong to the class rather than any particular instance. They can be called without creating an instance of the class.
+```
+  - `Static Methods: ` Similarly, static methods belong to the class rather than any particular instance. They can be called without creating an instance of the class.
     
   ```java
        public class MyClass {
@@ -354,3 +354,67 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
           }
      }
   ```
+  **Final**
+- `Final Attribute (Variable): ` A final attribute cannot be reassigned once initialized.
+  
+  ```java
+    class MyClass {
+        // Final attribute
+        final int constant = 10;
+    
+        // Method attempting to change the value of constant
+        public void changeValue() {
+            // This would result in a compilation error
+            // constant = 20;
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            // Instantiate MyClass
+            MyClass obj = new MyClass();
+            // Access constant attribute
+            System.out.println("Constant value: " + obj.constant);
+        }
+    }
+  ```
+
+- `Final Method: ` A final method cannot be overridden in subclasses.
+  
+  ```java
+      class Parent {
+        // Final method
+            public final void finalMethod() {
+                // Method implementation
+            }
+        }
+        
+        public class Child extends Parent {
+            // Attempting to override finalMethod will result in a compilation error
+            // public void finalMethod() { }
+            
+            public static void main(String[] args) {
+                // Instantiate Child class
+                Child child = new Child();
+                // Call finalMethod
+                child.finalMethod();
+            }
+        }
+  ```
+- `Final Class: ` When a class is declared as final, it means that it cannot be subclassed. This prevents other classes from inheriting from it.
+  
+ ```java
+    final class FinalClass {
+          // Class members and methods
+      }
+      
+      public class Main {
+          public static void main(String[] args) {
+              // Instantiate FinalClass
+              FinalClass obj = new FinalClass();
+              // Access methods or members of FinalClass
+          }
+      }
+ ```
+
+
