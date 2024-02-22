@@ -40,10 +40,10 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
  ### 2. Compilation:
    - Compile your Java source code into bytecode using a Java compiler included in the Java Development Kit (JDK). You can compile your code using the javac command-line tool or built-in features of an IDE. Compilation converts your Java source code into .class files containing Java bytecode.
 
-3. **Runtime Environment (JRE):** 
+### 3. Runtime Environment (JRE)
    - To execute the Java bytecode, install the Java Runtime Environment (JRE), which includes the Java Virtual Machine (JVM) and standard Java class libraries. The JRE provides an environment for executing Java bytecode.
 
-4. **Running the Program:** 
+### 4. Running the Program
    - Once the JRE is installed, run your Java program using the java command followed by the name of the class containing the main() method in your terminal or command prompt.
 
 
@@ -88,19 +88,44 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 
 
    ```java
-     // Superclass
-   class Animal {
-       void eat() {
-           System.out.println("Animal is eating...");
-       }
-   }
-   
-   // Subclass inheriting from Animal
-   class Dog extends Animal {
-       void bark() {
-           System.out.println("Dog is barking...");
-       }
-   }
+    // Parent class
+class Vehicle {
+    String brand;
+
+    void drive() {
+        System.out.println("Driving a vehicle...");
+    }
+}
+ ```
+
+ ```java
+
+// Child class inheriting from Vehicle
+class Car extends Vehicle {
+    int numberOfSeats;
+
+    void accelerate() {
+        System.out.println("Car is accelerating...");
+    }
+}
+ ```
+
+ ```java
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Creating an instance of Car
+        Car myCar = new Car();
+        myCar.brand = "Toyota";
+        myCar.numberOfSeats = 5;
+
+        // Accessing methods from both Vehicle and Car
+        myCar.drive(); // Inherited from Vehicle class
+        myCar.accelerate(); // Specific to Car class
+    }
+}
+
 
    ```
 
