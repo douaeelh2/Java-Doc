@@ -14,8 +14,9 @@ This documentation aims to provide an overview of fundamental Java concepts nece
   - [Polymorphism](#Polymorphism)
   - [Overloading and Overriding](#Overloading-And-Overriding)
   - [Aggregation and Composition](#Aggregation-And-Composition)
-  - [Interface & Class](#Interface-&-Class)
-  - [Static & Final](#[Static-&-Final)
+  - [Interface & Abstract Class](#Interface-&-Abstract-Class)
+  - [Static](#Static)
+  - [Final](#Final)
 
 
 ## What is JDK, JRE and JVM in Java
@@ -242,13 +243,13 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
  In this example, a `Car` is composed of an `Engine`. The Engine object is created along with the `Car` object and cannot exist independently. If the `Car` object is destroyed, the `Engine` object is also destroyed.
 
  ### 7. Interface & Class
-   **Interface**
-    - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
-    - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
-    - Classes that implement an interface must provide an `implementation` for all methods declared in that interface.
-    - A class can implement `multiple interfaces`, thus providing increased flexibility in program design.
-    - Interfaces can be used to define types, enabling `polymorphism`.
-    - Extend one or more interfaces
+ 
+  - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
+  - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
+  - Classes that implement an interface must provide an `implementation` for all methods declared in that interface.
+  - A class can implement `multiple interfaces`, thus providing increased flexibility in program design.
+  - Interfaces can be used to define types, enabling `polymorphism`.
+  - Extend one or more interfaces
 
    ```java
       // Interface
@@ -258,15 +259,14 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
 
    ```
 
-   **Abstract Class**
-    - An abstract class is a class that cannot be `instantiated` directly.
-    - It can contain both `abstract methods` (methods without implementation) and `concrete methods` (methods with implementation).
-    - An abstract class can have instance variables, constructors, and methods with or without implementation.
-    - Subclasses must extend an abstract class and implement all its abstract methods, unless they are also declared abstract.
-    - An abstract class can also provide default implementation for some methods, which subclasses may choose to override or not.
-    - Cannot be declared `final`
-    - Abstract methods should not be `private`
-    - An `abstract class` can partially implement an `interface`
+  - An abstract class is a class that cannot be `instantiated` directly.
+  - It can contain both `abstract methods` (methods without implementation) and `concrete methods` (methods with implementation).
+  - An abstract class can have instance variables, constructors, and methods with or without implementation.
+  - Subclasses must extend an abstract class and implement all its abstract methods, unless they are also declared abstract.
+  - An abstract class can also provide default implementation for some methods, which subclasses may choose to override or not.
+  - Cannot be declared `final`
+  - Abstract methods should not be `private`
+  - An `abstract class` can partially implement an `interface`
     
  ```java
      // Abstract class
@@ -304,9 +304,8 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
     }
 ```
 
-### 8. Static & Final
-   **Static**
-    - `Static Variables (Attributes): ` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class.   There will be only one copy of a static variable regardless of how many instances of the class are created. 
+### 8. Static
+   - `Static Variables (Attributes): ` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class.   There will be only one copy of a static variable regardless of how many instances of the class are created. 
 
   ```java
       public class MyClass {
@@ -354,7 +353,8 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
           }
      }
   ```
-  **Final**
+
+### 9. Final
 - `Final Attribute (Variable): ` A final attribute cannot be reassigned once initialized.
   
   ```java
