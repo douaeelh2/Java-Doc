@@ -13,20 +13,20 @@ This documentation aims to provide an overview of fundamental Java concepts nece
 
 ## What is JDK, JRE and JVM in Java
  ### 1. JDK (Java Development Kit)
-   - The JDK(Java Development Kit) is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
+   - The `JDK(Java Development Kit)` is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
      
      
      ![Java JDK JRE and JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/ab43eb26-79a7-4936-8ace-10da5a248a51)
 
  ### 2. JVM (Java Virtual Machine)
-   - JVM is a very important component of Java programming language. When you run the Java program, the Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly).
-   - JVM is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
+   - `JVM` is a very important component of Java programming language. When you run the Java program, the Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly).
+   - `JVM` is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
   
      ![JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2b0cfefd-eae7-405d-8d67-be6492089df4)
      
 
  ### 3. JRE(Java Runtime Environment)
-   - The Java Runtime Environment (JRE) provides the libraries, the Java Virtual Machine, and other components to run applets and applications written in the Java programming language.
+   - `The Java Runtime Environment (JRE)`provides the libraries, the Java Virtual Machine, and other components to run applets and applications written in the Java programming language.
 JRE doesn’t contain any development tools such as Java compiler, debugger, JShell, etc.
    - If you just want to execute a java program, you can install only JRE. You don’t need JDK because there is no development or compilation of java source code is required.
 
@@ -49,7 +49,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 
 ## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
-   - Encapsulation is the mechanism of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class.
+   - `Encapsulation` is the mechanism of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class.
    -  It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
      
      
@@ -85,8 +85,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    ```
    
  ### 2. Inheritance
-   - Inheritance is a mechanism in which a new class inherits properties and behavior (methods) from an existing class.
-   - promoting code reuse, class hierarchy, and object specialization.
+   - `Inheritance` is a mechanism in which a new class inherits properties and behavior (methods) from an existing class.
+   - Promoting code reuse, class hierarchy, and object specialization.
 
    ```java
     // Parent class
@@ -129,7 +129,7 @@ public class Main {
 
 ```
  ### 3. Abstraction
-   - Abstraction is the process of hiding the implementation details and showing only the essential features of an object. It helps in reducing programming complexity and focusing on relevant aspects
+   - `Abstraction` is the process of hiding the implementation details and showing only the essential features of an object. It helps in reducing programming complexity and focusing on relevant aspects
    - Abstract classes cannot be instantiated on their own and may contain abstract methods (methods without implementation)
      
 ```java
@@ -148,10 +148,10 @@ class Circle extends Shape {
 }
 ```
 ### 4. Polymorphism
-  - Polymorphism is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two types of polymorphism in Java: compile-time (method overloading) and runtime (method overriding).
+  - `Polymorphism` is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two types of polymorphism in Java: compile-time (method overloading) and runtime (method overriding).
     
 ### 5. Overloading and Overriding
-  - Overloading occurs when a class has multiple methods with the same name but different signature. 
+  - `Overloading` occurs when a class has multiple methods with the same name but different signature. 
     
   ```java
     class MathOperations {
@@ -165,7 +165,7 @@ class Circle extends Shape {
      }
     }
  ```
-  - Overriding happens when a subclass provides a specific implementation of a method that is already defined in its superclass with the same signature.
+  - `Overriding` happens when a subclass provides a specific implementation of a method that is already defined in its superclass with the same signature.
     
   ```java
     class Animal {
@@ -181,7 +181,7 @@ class Circle extends Shape {
     }
   ```
  ### 6. Aggregation and Composition
-  - Aggregation represents a "has-a" relationship.
+  - `Aggregation` represents a "has-a" relationship.
   - It occurs when an object contains another object, but the contained object can exist independently of the container object.
 
    ```java
@@ -210,9 +210,9 @@ class Circle extends Shape {
    }
 
   ```
-In this example, a Department has multiple Professor objects. However, the Professor objects can exist independently of the Department. If the Department object is destroyed, the Professor objects still exist.
+In this example, a `Department` has multiple `Professor` objects. However, the `Professor` objects can exist independently of the`Department`. If the `Department` object is destroyed, the `Professor` objects still exist.
 
-  - Composition represents a stronger form of aggregation and implies a "part-of" relationship.
+  - `Composition` represents a stronger form of aggregation and implies a "part-of" relationship.
   - In composition, the lifetime of the contained object is dependent on the lifetime of the container object.
     
        ```java
@@ -232,7 +232,7 @@ In this example, a Department has multiple Professor objects. However, the Profe
        }
 
      ```
- In this example, a `Car` is composed of an Engine. The Engine object is created along with the Car object and cannot exist independently. If the Car object is destroyed, the Engine object is also destroyed.
+ In this example, a `Car` is composed of an `Engine`. The Engine object is created along with the `Car` object and cannot exist independently. If the `Car` object is destroyed, the `Engine` object is also destroyed.
 
 
 
