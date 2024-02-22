@@ -241,6 +241,68 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
      ```
  In this example, a `Car` is composed of an `Engine`. The Engine object is created along with the `Car` object and cannot exist independently. If the `Car` object is destroyed, the `Engine` object is also destroyed.
 
+ ### 7. Interface & Class
+   ### Interface
+  - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
+  - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
+  - Classes that implement an interface must provide an `implementation` for all methods declared in that interface.
+  - A class can implement `multiple interfaces`, thus providing increased flexibility in program design.
+  - Interfaces can be used to define types, enabling `polymorphism`.
+  - Extend one or more interfaces
+    
+    ### Abstract Class
+    - An abstract class is a class that cannot be `instantiated` directly.
+    - It can contain both `abstract methods` (methods without implementation) and `concrete methods` (methods with implementation).
+    - An abstract class can have instance variables, constructors, and methods with or without implementation.
+    - Subclasses must extend an abstract class and implement all its abstract methods, unless they are also declared abstract.
+    - An abstract class can also provide default implementation for some methods, which subclasses may choose to override or not.
+    - Cannot be declared `final`
+    - Abstract methods should not be `private`
+    - An `abstract class` can partially implement an `interface`
+      
+   ```java
+      // Interface
+    interface Animal {
+        void makeSound();
+    }
+
+  ```
+
+ ```java
+     // Abstract class
+    abstract class Vehicle {
+        abstract void drive();
+    
+        void stop() {
+            System.out.println("Vehicle stopped");
+        }
+    }
+
+  ```
+ ```java
+    // Class implementing an interface and extending an abstract class
+    class Car extends Vehicle implements Animal {
+        @Override
+        void drive() {
+            System.out.println("Car is being driven");
+        }
+    
+        @Override
+        public void makeSound() {
+            System.out.println("Car honks");
+        }
+    }
+ ```
+ ```java
+    public class Main {
+        public static void main(String[] args) {
+            Car myCar = new Car();
+            myCar.drive();
+            myCar.makeSound();
+            myCar.stop();
+        }
+    }
+ ```
 
 
 
