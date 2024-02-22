@@ -147,14 +147,11 @@ class Circle extends Shape {
     }
 }
 ```
-### 4. Polymorphism:
+### 4. Polymorphism
   - Polymorphism is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two types of polymorphism in Java: compile-time (method overloading) and runtime (method overriding).
     
-### 5. Overloading and Overriding:
-  - Overloading occurs when a class has multiple methods with the same name but different parameters. 
-  - Overriding happens when a subclass provides a specific implementation of a method that is already defined in its superclass.
-
-    Example of method overloading (compile-time polymorphism):
+### 5. Overloading and Overriding
+  - Overloading occurs when a class has multiple methods with the same name but different signature. 
     
   ```java
     class MathOperations {
@@ -168,8 +165,8 @@ class Circle extends Shape {
      }
     }
  ```
-Example of method overriding (runtime polymorphism):
-
+  - Overriding happens when a subclass provides a specific implementation of a method that is already defined in its superclass with the same signature.
+    
   ```java
     class Animal {
         void makeSound() {
@@ -183,6 +180,59 @@ Example of method overriding (runtime polymorphism):
         }
     }
   ```
+ ### 6. Aggregation and Composition
+  - Aggregation represents a "has-a" relationship.
+  - It occurs when an object contains another object, but the contained object can exist independently of the container object.
+
+   ```java
+       class Department {
+       private String name;
+       // Other attributes and methods
+       
+       // Aggregation: Department has-a Professor
+       private Professor[] professors; // Array of professors
+   
+       public Department(String name) {
+           this.name = name;
+           professors = new Professor[10]; // Example: department can have up to 10 professors
+       }
+       
+       // Other methods to manage professors
+   }
+   
+   class Professor {
+       private String name;
+       // Other attributes and methods
+       
+       public Professor(String name) {
+           this.name = name;
+       }
+   }
+
+  ```
+In this example, a Department has multiple Professor objects. However, the Professor objects can exist independently of the Department. If the Department object is destroyed, the Professor objects still exist.
+
+  - Composition represents a stronger form of aggregation and implies a "part-of" relationship.
+  - In composition, the lifetime of the contained object is dependent on the lifetime of the container object.
+    
+       ```java
+        class Car {
+         // Composition: Car has-a Engine
+         private Engine engine;
+     
+         public Car() {
+             this.engine = new Engine(); // Engine is created along with the Car
+         }
+         
+           // Other attributes and methods
+       }
+       
+       class Engine {
+           // Attributes and methods of Engine
+       }
+
+     ```
+ In this example, a `Car` is composed of an Engine. The Engine object is created along with the Car object and cannot exist independently. If the Car object is destroyed, the Engine object is also destroyed.
 
 
 
