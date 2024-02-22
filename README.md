@@ -7,7 +7,7 @@ This documentation aims to provide an overview of fundamental Java concepts nece
 - [What is JDK, JRE and JVM in Java](#What-is-JDK-JRE-and-JVM-in-Java)
 - [How to Execute a Java Program](#How-to-execute-a-Java-Program)
 - [Java Basics](#Java-Basics)
-- [Java OOP](#Java-OOP)
+- [Java OOP (Object-Oriented Programming)](#Java-OOP (Object-Oriented Programming))
 - [Interfaces](#interfaces)
 - [Exception Handling](#exception-handling)
 
@@ -47,7 +47,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    - Once the JRE is installed, run your Java program using the java command followed by the name of the class containing the main() method in your terminal or command prompt.
 
 
-## Java OOP
+## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
    - Encapsulation is the mechanism of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class. It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
      
