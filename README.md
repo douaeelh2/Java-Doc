@@ -305,7 +305,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
 ```
 
 ### 8. Static
-   - `Static Variables (Attributes): ` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class.   There will be only one copy of a static variable regardless of how many instances of the class are created. 
+   - `Static Variables (Attributes):` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class.   There will be only one copy of a static variable regardless of how many instances of the class are created. 
 
   ```java
       public class MyClass {
@@ -323,7 +323,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
       }
   }
 ```
-  - `Static Methods: ` Similarly, static methods belong to the class rather than any particular instance. They can be called without creating an instance of the class.
+  - `Static Methods:` Similarly, static methods belong to the class rather than any particular instance. They can be called without creating an instance of the class.
     
   ```java
        public class MyClass {
@@ -337,7 +337,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
               }
             }
   ```
-  - `Static Class: ` In Java, classes themselves cannot be declared as static. They are loaded into memory when the program starts, and each instance of the class has its own memory. However, nested static classes are allowed. These nested classes belong to the outer class and can be instantiated without requiring an instance of the outer class.
+  - `Static Class:` In Java, classes themselves cannot be declared as static. They are loaded into memory when the program starts, and each instance of the class has its own memory. However, nested static classes are allowed. These nested classes belong to the outer class and can be instantiated without requiring an instance of the outer class.
     
  ```java
      public class OuterClass {
@@ -355,7 +355,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
   ```
 
 ### 9. Final
-- `Final Attribute (Variable): ` A final attribute cannot be reassigned once initialized.
+- `Final Attribute (Variable):` A final attribute cannot be reassigned once initialized.
   
   ```java
     class MyClass {
@@ -379,7 +379,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
     }
   ```
 
-- `Final Method: ` A final method cannot be overridden in subclasses.
+- `Final Method:` A final method cannot be overridden in subclasses.
   
   ```java
       class Parent {
@@ -401,7 +401,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
             }
         }
   ```
-- `Final Class: ` When a class is declared as final, it means that it cannot be subclassed. This prevents other classes from inheriting from it.
+- `Final Class:` When a class is declared as final, it means that it cannot be subclassed. This prevents other classes from inheriting from it.
   
    ```java
       final class FinalClass {
