@@ -15,7 +15,7 @@ This documentation aims to provide an overview of fundamental Java concepts nece
   - [Overloading and Overriding](#Overloading-And-Overriding)
   - [Aggregation and Composition](#Aggregation-And-Composition)
   - [Interface & Class](#Interface-&-Class)
-
+  - [Static & Final](#[Static-&-Final)
 
 
 ## What is JDK, JRE and JVM in Java
@@ -242,7 +242,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
  In this example, a `Car` is composed of an `Engine`. The Engine object is created along with the `Car` object and cannot exist independently. If the `Car` object is destroyed, the `Engine` object is also destroyed.
 
  ### 7. Interface & Class
-   ### Interface
+   #### Interface
   - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
   - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
   - Classes that implement an interface must provide an `implementation` for all methods declared in that interface.
@@ -250,7 +250,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
   - Interfaces can be used to define types, enabling `polymorphism`.
   - Extend one or more interfaces
     
-    ### Abstract Class
+    #### Abstract Class
     - An abstract class is a class that cannot be `instantiated` directly.
     - It can contain both `abstract methods` (methods without implementation) and `concrete methods` (methods with implementation).
     - An abstract class can have instance variables, constructors, and methods with or without implementation.
@@ -293,7 +293,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
         }
     }
  ```
- ```java
+```java
     public class Main {
         public static void main(String[] args) {
             Car myCar = new Car();
@@ -302,7 +302,55 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
             myCar.stop();
         }
     }
- ```
+```
 
+### 8. Static & Final
+  #### Static 
+    - `Static Variables (Attributes): ` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class.   There will be only one copy of a static variable regardless of how many instances of the class are created. 
 
-
+  ```java
+      public class MyClass {
+      static int myStaticVariable = 10;
+  
+      public static void main(String[] args) {
+          MyClass obj1 = new MyClass();
+          MyClass obj2 = new MyClass();
+  
+          // Both objects share the same static variable
+          obj1.myStaticVariable = 20;
+  
+          System.out.println("obj1 static variable: " + obj1.myStaticVariable);
+          System.out.println("obj2 static variable: " + obj2.myStaticVariable);
+      }
+  }
+  ```
+    - `Static Methods: ` Similarly, static methods belong to the class rather than any particular instance. They can be called without creating an instance of the class.
+    
+  ```java
+       public class MyClass {
+      
+            static void myStaticMethod() {
+                System.out.println("This is a static method.");
+            }
+        
+            public static void main(String[] args) {
+                MyClass.myStaticMethod();
+              }
+            }
+  ```
+  - `Static Class: ` In Java, classes themselves cannot be declared as static. They are loaded into memory when the program starts, and each instance of the class has its own memory. However, nested static classes are allowed. These nested classes belong to the outer class and can be instantiated without requiring an instance of the outer class.
+    
+ ```java
+     public class OuterClass {
+          static class NestedStaticClass {
+              void display() {
+                  System.out.println("This is a static nested class.");
+              }
+          }
+      
+          public static void main(String[] args) {
+              OuterClass.NestedStaticClass nested = new OuterClass.NestedStaticClass();
+              nested.display();
+          }
+     }
+  ```
