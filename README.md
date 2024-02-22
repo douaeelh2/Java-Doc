@@ -26,7 +26,7 @@ This documentation aims to provide an overview of fundamental Java concepts nece
      ![JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2b0cfefd-eae7-405d-8d67-be6492089df4)
      
 
-3. **3. JRE(Java Runtime Environment)**
+3. **JRE(Java Runtime Environment)**
    - The Java Runtime Environment (JRE) provides the libraries, the Java Virtual Machine, and other components to run applets and applications written in the Java programming language.
 JRE doesn’t contain any development tools such as Java compiler, debugger, JShell, etc.
    - If you just want to execute a java program, you can install only JRE. You don’t need JDK because there is no development or compilation of java source code is required.
