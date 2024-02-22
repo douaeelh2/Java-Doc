@@ -15,6 +15,7 @@ This documentation aims to provide an overview of fundamental Java concepts nece
 ## What is JDK, JRE and JVM in Java
 1. **JDK(Java Development Kit)**
    - The JDK(Java Development Kit) is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
+     ![Java JDK JRE and JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/ab43eb26-79a7-4936-8ace-10da5a248a51)
 
 2. **JVM (Java Virtual Machine)**
    - JVM is a very important component of Java programming language. When you run the Java program, the Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly).
