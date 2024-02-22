@@ -242,7 +242,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
  In this example, a `Car` is composed of an `Engine`. The Engine object is created along with the `Car` object and cannot exist independently. If the `Car` object is destroyed, the `Engine` object is also destroyed.
 
  ### 7. Interface & Class
-   #### Interface
+   **Interface**
     - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
     - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
     - Classes that implement an interface must provide an `implementation` for all methods declared in that interface.
@@ -250,7 +250,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
     - Interfaces can be used to define types, enabling `polymorphism`.
     - Extend one or more interfaces
     
-   #### Abstract Class
+   **Abstract Class**
     - An abstract class is a class that cannot be `instantiated` directly.
     - It can contain both `abstract methods` (methods without implementation) and `concrete methods` (methods with implementation).
     - An abstract class can have instance variables, constructors, and methods with or without implementation.
