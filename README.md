@@ -8,7 +8,7 @@ This documentation aims to provide an overview of fundamental Java concepts nece
 - [How to Execute a Java Program](#How-to-Execute-a-Java-Program)
 - [Java Basics](#Java-Basics)
 - [Java OOP (Object-Oriented Programming)](#Java-OOP-Object-Oriented-Programming)
-  1 - [Encapsulation](#Encapsulation)
+  - [Encapsulation](#Encapsulation)
   - [Inheritance](#Inheritance)
   - [Abstraction](#Abstraction)
   - [Polymorphism](#Polymorphism)
@@ -45,18 +45,18 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    - Begin by writing your Java program using a text editor or an Integrated Development Environment (IDE) such as Eclipse, Netbeans, or IntelliJ IDEA. Save the Java source code in files with the .java extension.
 
  ### 2. Compilation:
-   - Compile your Java source code into bytecode using a Java compiler included in the `Java Development Kit (JDK)`. You can compile your code using the `javac` command-line tool or built-in features of an IDE. Compilation converts your Java source code into `.class` files containing Java bytecode.
+   - Compile your Java source code into bytecode using a Java compiler included in the `Java Development Kit (JDK) `. You can compile your code using the `javac ` command-line tool or built-in features of an IDE. Compilation converts your Java source code into `.class ` files containing Java bytecode.
 
 ### 3. Runtime Environment (JRE)
-   - To execute the Java bytecode, install the `Java Runtime Environment (JRE)`, which includes the `Java Virtual Machine (JVM)` and standard Java class libraries. The JRE provides an environment for executing Java bytecode.
+   - To execute the Java bytecode, install the `Java Runtime Environment (JRE) `, which includes the `Java Virtual Machine (JVM) ` and standard Java class libraries. The JRE provides an environment for executing Java bytecode.
 
 ### 4. Running the Program
-   - Once the JRE is installed, run your Java program using the `java` command followed by the name of the class containing the `main()` method in your terminal or command prompt.
+   - Once the JRE is installed, run your Java program using the `java` command followed by the name of the class containing the `main() ` method in your terminal or command prompt.
 
 
 ## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
-   - `Encapsulation` is the mechanism of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class.
+   - `Encapsulation ` is the mechanism of bundling the data `(attributes) ` and the methods `(functions) ` that operate on the data into a single unit called a class.
    -  It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
      
      
@@ -92,7 +92,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    ```
    
  ### 2. Inheritance
-   - `Inheritance` is a mechanism in which a new class inherits properties and behavior (methods) from an existing class.
+   - `Inheritance ` is a mechanism in which a new class inherits properties and behavior `(methods) ` from an existing class.
    - Promoting code reuse, class hierarchy, and object specialization.
 
    ```java
@@ -155,10 +155,10 @@ class Circle extends Shape {
 }
 ```
 ### 4. Polymorphism
-  - `Polymorphism` is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two types of polymorphism in Java: compile-time (method overloading) and runtime (method overriding).
+  - `Polymorphism ` is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two types of polymorphism in Java: compile-time `(method overloading) ` and runtime `(method overriding) `.
     
 ### 5. Overloading and Overriding
-  - `Overloading` occurs when a class has multiple methods with the same name but different signature. 
+  - `Overloading ` occurs when a class has multiple methods with the same name but different signature. 
     
   ```java
     class MathOperations {
@@ -188,7 +188,7 @@ class Circle extends Shape {
     }
   ```
  ### 6. Aggregation and Composition
-  - `Aggregation` represents a "has-a" relationship.
+  - `Aggregation ` represents a "has-a" relationship.
   - It occurs when an object contains another object, but the contained object can exist independently of the container object.
 
    ```java
@@ -217,9 +217,9 @@ class Circle extends Shape {
    }
 
   ```
-In this example, a `Department` has multiple `Professor` objects. However, the `Professor` objects can exist independently of the`Department`. If the `Department` object is destroyed, the `Professor` objects still exist.
+In this example, a `Department ` has multiple `Professor ` objects. However, the `Professor ` objects can exist independently of the`Department `. If the `Department ` object is destroyed, the `Professor ` objects still exist.
 
-  - `Composition` represents a stronger form of aggregation and implies a "part-of" relationship.
+  - `Composition ` represents a stronger form of aggregation and implies a "part-of" relationship.
   - In composition, the lifetime of the contained object is dependent on the lifetime of the container object.
     
        ```java
@@ -240,9 +240,6 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
 
      ```
  In this example, a `Car` is composed of an `Engine`. The Engine object is created along with the `Car` object and cannot exist independently. If the `Car` object is destroyed, the `Engine` object is also destroyed.
-
-
-
 
 
 
