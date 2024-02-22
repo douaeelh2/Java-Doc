@@ -147,6 +147,46 @@ class Circle extends Shape {
     }
 }
 ```
+### 4. Polymorphism:
+  - Polymorphism is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two types of polymorphism in Java: compile-time (method overloading) and runtime (method overriding).
+    
+### 5. Overloading and Overriding:
+  - Overloading occurs when a class has multiple methods with the same name but different parameters. 
+  - Overriding happens when a subclass provides a specific implementation of a method that is already defined in its superclass.
+
+    Example of method overloading (compile-time polymorphism):
+    
+  ```java
+    class MathOperations {
+    // Method overloading
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+     }
+    }
+ ```
+Example of method overriding (runtime polymorphism):
+
+  ```java
+    class Animal {
+        void makeSound() {
+            System.out.println("Animal makes a sound");
+        }
+    }
+    
+    class Dog extends Animal {
+        void makeSound() {
+            System.out.println("Dog barks");
+        }
+    }
+  ```
+
+
+
+
 
 
 
