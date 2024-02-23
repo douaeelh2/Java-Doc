@@ -63,8 +63,14 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 ### 4. Running the Program
    - Once the JRE is installed, run your Java program using the `java` command followed by the name of the class containing the `main()` method in your terminal or command prompt.
 
+## Java Basics
+ ### 1.Lambda Expressions
 
-## Java OOP (Object-Oriented Programming)
+ ![lambda-expressions](https://github.com/douaeelh2/Java-Documentation/assets/127549220/400f7ba6-15eb-4928-b4c6-ab3f1b6ba341)
+
+  ### 2.Functional Interfaces
+
+## 6. Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
    - `Encapsulation` is the mechanism of bundling the data `(attributes)` and the methods `(functions)` that operate on the data into a single unit called a class.
    -  It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
