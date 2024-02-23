@@ -96,8 +96,9 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   ```
   
   ### 2.Functional Interfaces
+  
 
-## 6. Java OOP (Object-Oriented Programming)
+## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
    - `Encapsulation` is the mechanism of bundling the data `(attributes)` and the methods `(functions)` that operate on the data into a single unit called a class.
    -  It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
