@@ -65,9 +65,36 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 
 ## Java Basics
  ### 1.Lambda Expressions
+  **Zero Parameters :**
+  
+  ```java
+  () -> System.out.println("No parameters!");
+  ```
 
- ![lambda-expressions](https://github.com/douaeelh2/Java-Documentation/assets/127549220/400f7ba6-15eb-4928-b4c6-ab3f1b6ba341)
+ **One Parameter :**
+  
+  ```java
+  s -> System.out.println(s);
+  ```
 
+ **Multiple Parameters :**
+  
+  ```java
+  (int x, int y) -> x + y;
+  ```
+
+ **Single Expression :**
+  
+  ```java
+  a -> a * a // no need for the return keyword
+  ```
+
+  **Code Block :**
+  
+  ```java
+ (a , b) -> { return a + b }; // Multiple statements inside braces
+  ```
+  
   ### 2.Functional Interfaces
 
 ## 6. Java OOP (Object-Oriented Programming)
