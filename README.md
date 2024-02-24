@@ -10,7 +10,7 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Lambda Expressions](#java-lambda-expressions)
   - [Functional Interfaces](#java-functional-interfaces)
   - [Static and Default Methods in Interface](#java-static-and-default-methods-in-interface)
-  - [Collectors Class](#java-collectors-class)
+  - [Collection Interfaces](#collection-interfaces)
   - [Stream API](#java-stream-api)
   - [Optional Class](#java-optional-class)
   - [StringJoiner Class](#java-stringjoiner-class)
@@ -250,7 +250,97 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
         }
     }
    ```
+  ## 4. Collections Interfaces
+  
+  Collection Interfaces refers to the interfaces provided in the Java Collections Framework (JCF) that define various types of collections. These interfaces are part of the java.util   package and provide a standardized way of working with collections of objects.
+  ![Java-Collections-Framework-Hierarchy](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2837ac14-8fc7-41a8-b72c-680fe454136d)
 
+   `Collection:`
+    - This is the root interface in the collection hierarchy. It defines basic operations applicable to all collections such as adding, removing, and querying elements.
+    - Use this when you need a general-purpose collection to store a group of objects without caring about the specific order or uniqueness of elements.
+      
+     ```java
+        public class CollectionExample {
+          public static void main(String[] args) {
+            Collection<String> names = new ArrayList<>();
+                
+                names.add("Alice");
+                names.add("Bob");
+                names.add("Charlie");
+                
+                System.out.println("Collection: " + names);
+            }
+        }
+     ```
+     
+     `List:`
+      - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index.
+      - Common implementations of the List interface include ArrayList, LinkedList, etc.
+  
+     ```java
+        public class ListExample {
+            public static void main(String[] args) {
+                List<Integer> numbers = new ArrayList<>();
+                
+                numbers.add(10);
+                numbers.add(20);
+                numbers.add(30);
+                
+                System.out.println("List: " + numbers);
+                
+                // Accessing element by index
+                int secondElement = numbers.get(1);
+                System.out.println("Second element: " + secondElement);
+            }
+        }
+     ```
+
+    `Map:`
+     - A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include   
+     HashMap, TreeMap, LinkedHashMap, etc.
+
+     ```java
+        public class MapExample {
+            public static void main(String[] args) {
+                Map<String, Integer> ageMap = new HashMap<>();
+                
+                ageMap.put("Alice", 30);
+                ageMap.put("Bob", 25);
+                ageMap.put("Charlie", 35);
+                
+                System.out.println("Map: " + ageMap);
+                
+                // Retrieving value by key
+                int aliceAge = ageMap.get("Alice");
+                System.out.println("Alice's age: " + aliceAge);
+            }
+        }
+    ```
+
+    `Set:` 
+      - A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet,           LinkedHashSet, etc.
+
+     ```java
+        public class SetExample {
+            public static void main(String[] args) {
+                // Creating a Set of integers
+                Set<Integer> numbers = new HashSet<>();
+        
+                // Adding elements to the Set
+                numbers.add(5);
+                numbers.add(10);
+                numbers.add(15);
+                numbers.add(5); // This duplicate value will be ignored
+        
+                // Printing all elements of the Set
+                System.out.println("Numbers:");
+                for (int number : numbers) {
+                    System.out.println(number);
+                }
+            }
+        }
+     ```
+     
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
    - `Encapsulation` is the mechanism of bundling the data `(attributes)` and the methods `(functions)` that operate on the data into a single unit called a class.
