@@ -9,12 +9,11 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
 - [Java 8 Basics](#java-8-basics)
   - [Lambda Expressions](#java-lambda-expressions)
   - [Functional Interfaces](#java-functional-interfaces)
-  - [Method References](#java-method-references)
+  - [Static and Default Methods in Interface](#java-static-and-default-methods-in-interface)
   - [Stream API](#java-stream-api)
   - [Optional Class](#java-optional-class)
   - [Collectors Class](#java-collectors-class)
   - [StringJoiner Class](#java-stringjoiner-class)
-  - [Static and Default Methods in Interface](#java-static-and-default-methods-in-interface)
     
 - [Java OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
   - [Encapsulation](#encapsulation)
@@ -214,6 +213,43 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
           }
       }
   ```
+## 3. Static and Default Method in Interface
+
+- `Static method` within an interface is a method that can be called directly on the interface itself, without requiring an instance of a class that implements the interface. Static methods in interfaces were introduced in Java 8 along with default methods.
+  
+- `Default method` is a method defined within an interface with a default implementation. Prior to the introduction of default methods in Java 8, interfaces could only contain method signatures, meaning methods without bodies. With default methods, it became possible to provide a default implementation for methods within interfaces.
+  
+  ```java
+       interface MyInterface {
+          void abstractMethod(); // Abstract method
+      
+          default void defaultMethod() { // Default method
+              System.out.println("This is a default method.");
+          }
+      
+          static void staticMethod() { // Static method
+              System.out.println("This is a static method.");
+          }
+      }
+  ```
+  
+  ```java
+      class MyClass implements MyInterface {
+          public void abstractMethod() {
+              System.out.println("Implementing the abstract method.");
+          }
+      }
+  ```
+  ```java
+      public class Main {
+        public static void main(String[] args) {
+            MyClass obj = new MyClass();
+            obj.abstractMethod(); // Calling the abstract method
+            obj.defaultMethod();  // Calling the default method
+            MyInterface.staticMethod(); // Calling the static method directly on the interface
+        }
+    }
+   ```
 
 ## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
@@ -411,32 +447,15 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
   - Interfaces can be used to define types, enabling `polymorphism`.
   - Extend one or more interfaces
 
-   ```java
-     interface MyInterface {
-      void abstractMethod(); // Abstract method
+  ```java
+       // Abstract class
+      abstract class Vehicle {
+          void drive(); // Implicitly abstract and public   
+          void stop();  // Implicitly abstract and public
+      }
   
-      default void defaultMethod() { // Default method
-          System.out.println("This is a default method.");
-        }
-      }
-   ```
-   ```java
-    class MyClass implements MyInterface {
-    public void abstractMethod() {
-       System.out.println("Implementing the abstract method.");
-          }
-      }
-   ```
-   ```java
-    public class Main {
-    public static void main(String[] args) {
-        MyClass obj = new MyClass();
-        obj.abstractMethod(); // Calling the abstract method
-        obj.defaultMethod();  // Calling the default method
-        }
-    }
-   ```
-
+  ```
+  
   - An abstract class is a class that cannot be `instantiated` directly.
   - It can contain both `abstract methods` (methods without implementation) and `concrete methods` (methods with implementation).
   - An abstract class can have instance variables, constructors, and methods with or without implementation.
@@ -456,7 +475,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
         }
     }
 
-  ```
+ ```
  ```java
     // Class implementing an interface and extending an abstract class
     class Car extends Vehicle implements Animal {
