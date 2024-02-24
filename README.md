@@ -251,8 +251,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     }
    ```
 
-## Java OOP (Object-Oriented Programming)
- ### 1. Encapsulation 
+# Java OOP (Object-Oriented Programming)
+ ## 1. Encapsulation 
    - `Encapsulation` is the mechanism of bundling the data `(attributes)` and the methods `(functions)` that operate on the data into a single unit called a class.
    -  It allows data to be hidden from the outside world and accessed only through the methods defined in the class.
      
@@ -288,7 +288,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    }
    ```
    
- ### 2. Inheritance
+ ## 2. Inheritance
    - `Inheritance` is a mechanism in which a new class inherits properties and behavior `(methods)` from an existing class.
    - Promoting code reuse, class hierarchy, and object specialization.
 
@@ -332,7 +332,7 @@ public class Main {
 }
 
 ```
- ### 3. Abstraction
+ ## 3. Abstraction
    - `Abstraction` is the process of hiding the implementation details and showing only the essential features of an object. It helps in reducing programming complexity and focusing on relevant aspects
    - `Abstract class` cannot be instantiated on their own and may contain abstract methods (methods without implementation)
      
@@ -351,10 +351,10 @@ class Circle extends Shape {
     }
 }
 ```
-### 4. Polymorphism
+## 4. Polymorphism
   - `Polymorphism` is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two types of polymorphism in Java: compile-time `(method overloading)` and runtime `(method overriding)`.
     
-### 5. Overloading and Overriding
+## 5. Overloading and Overriding
   - `Overloading` occurs when a class has multiple methods with the same name but different signature. 
     
   ```java
@@ -384,7 +384,7 @@ class Circle extends Shape {
         }
     }
   ```
- ### 6. Aggregation and Composition
+ ## 6. Aggregation and Composition
   - `Aggregation` represents a "has-a" relationship.
   - It occurs when an object contains another object, but the contained object can exist independently of the container object.
 
@@ -438,7 +438,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
      ```
  In this example, a `Car` is composed of an `Engine`. The Engine object is created along with the `Car` object and cannot exist independently. If the `Car` object is destroyed, the `Engine` object is also destroyed.
 
- ### 7. Interface & Class
+ ## 7. Interface & Class
  
   - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
   - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
@@ -501,7 +501,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
     }
 ```
 
-### 8. Static
+## 8. Static
    - `Static Variable:` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class. There will be only one copy of a static variable regardless of how many instances of the class are created. 
 
   ```java
@@ -576,7 +576,7 @@ public class MyClass {
      }
   ```
 
-### 9. Final
+## 9. Final
 - `Final Attribute (Variable):` A final attribute cannot be reassigned once initialized.
   
   ```java
