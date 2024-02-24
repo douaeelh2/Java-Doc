@@ -10,9 +10,9 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Lambda Expressions](#java-lambda-expressions)
   - [Functional Interfaces](#java-functional-interfaces)
   - [Static and Default Methods in Interface](#java-static-and-default-methods-in-interface)
+  - [Collectors Class](#java-collectors-class)
   - [Stream API](#java-stream-api)
   - [Optional Class](#java-optional-class)
-  - [Collectors Class](#java-collectors-class)
   - [StringJoiner Class](#java-stringjoiner-class)
     
 - [Java OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
