@@ -99,7 +99,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   - A functional interface is an interface that contains only `one abstract method`. It can also contain `default` and `static` methods, but it must have exactly one abstract method.
   - The `@FunctionalInterface` notation is optional but recommended to clearly indicate to other developers that this interface is intended to be used as a functional interface. If you try to declare a second abstract method in an interface annotated with `@FunctionalInterface` , the compiler will generate an error.
     
-    ```java
+   ```java
         @FunctionalInterface
         interface MyFunctionalInterface {
             void myAbstractMethod();
@@ -117,9 +117,9 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                 System.out.println("This is a static method.");
             }
         }
-    ```
+   ```
 
-    ```java
+   ```java
        public class Main {
           public static void main(String[] args) {
               // Using a lambda expression to implement the abstract method of the functional interface
@@ -135,7 +135,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
               MyFunctionalInterface.myStaticMethod(); // Output: "This is a static method."
           }
        }
-    ```
+   ```
 
   ### Functional Interface with Lambda Expression
   
@@ -194,6 +194,26 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
           }
   ```
 
+  ### Predicate interface
+  - `Predicate interface` is a functional interface that represents a function that takes an argument and returns a `boolean` value, often used for testing a condition. This Predicate interface is widely used in the context of lambda expressions and methods of the Stream class to perform filtering or selecting elements.
+    
+  ```java
+      import java.util.function.Predicate;
+      
+      public class Main {
+          public static void main(String[] args) {
+              // Using a pre-defined functional interface (Predicate) for checking even numbers
+              Predicate<Integer> isEven = num -> num % 2 == 0;
+              boolean result = isEven.test(10); // result will be true
+              System.out.println("Is 10 even? " + result);
+      
+              // Using a Predicate for string comparison
+              Predicate<String> test = tes -> "toto".equals(tes);
+              boolean result25 = test.test("toto");
+              System.out.println("Is the string 'toto'? " + result25);
+          }
+      }
+  ```
 
 ## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
