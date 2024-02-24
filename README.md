@@ -295,11 +295,29 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
   - Extend one or more interfaces
 
    ```java
-      // Interface
-    interface Animal {
-        void makeSound();
+     interface MyInterface {
+      void abstractMethod(); // Abstract method
+  
+      default void defaultMethod() { // Default method
+          System.out.println("This is a default method.");
+        }
+      }
+   ```
+   ```java
+    class MyClass implements MyInterface {
+    public void abstractMethod() {
+       System.out.println("Implementing the abstract method.");
+          }
+      }
+   ```
+   ```java
+    public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.abstractMethod(); // Calling the abstract method
+        obj.defaultMethod();  // Calling the default method
+        }
     }
-
    ```
 
   - An abstract class is a class that cannot be `instantiated` directly.
@@ -348,11 +366,11 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
 ```
 
 ### 8. Static
-   - `Static Variables (Attributes):` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class.   There will be only one copy of a static variable regardless of how many instances of the class are created. 
+   - `Static Variable:` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class. There will be only one copy of a static variable regardless of how many instances of the class are created. 
 
   ```java
       public class MyClass {
-      static int myStaticVariable = 10;
+      public static int myStaticVariable = 10;
   
       public static void main(String[] args) {
           MyClass obj1 = new MyClass();
@@ -366,7 +384,31 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
       }
   }
 ```
-  - `Static Methods:` Similarly, static methods belong to the class rather than any particular instance. They can be called without creating an instance of the class.
+```java
+public class MyClass {
+    private static int count = 0; // Static variable
+
+    public void incrementCount() {
+        count++; // Accessing and modifying the static variable
+    }
+
+    public int getCount() {
+        return count; // Accessing the static variable
+    }
+}
+```
+ ```java
+      public class Main {  
+      public static void main(String[] args) {
+        MyClass.incrementCount();
+        System.out.println(MyClass.getCount());
+      }
+  }
+```
+  - `Static Method:`static method is a method that belongs to the class rather than to any specific instance of the class. This means you can call a static method without creating an instance of the class.
+  - `No Access to Instance Variables `: Static methods cannot access instance variables directly because they don't belong to any instance. However, they can access static variables.
+  - Cannot Use `this` Keyword Since static methods are not tied to any particular instance, they cannot use the this keyword to refer to the current instance.
+  - Can Call other `static` methods directly.
     
   ```java
        public class MyClass {
