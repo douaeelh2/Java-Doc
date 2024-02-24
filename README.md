@@ -1,4 +1,4 @@
-# Java 8 Fundamentals for Spring Boot
+# Java Fundamentals for Spring Boot
 
 # Introduction
 This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 concepts necessary for working with Spring Boot.
@@ -6,7 +6,7 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
 # Table of Contents
 - [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
 - [How to Execute a Java Program](#how-to-execute-a-java-program)
-- [Java Basics](#java-basics)
+- [Java 8 Basics](#java-basics)
   - [Lambda Expressions](#java-8-lambda-expressions)
   - [Functional Interfaces](#java-8-functional-interfaces)
   - [Method References](#java-8-method-references)
@@ -137,7 +137,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
        }
     ```
     
-  ### 2.1 Functional Interface with Lambda Expressions and Method References
+  ### Functional Interface with Lambda Expressions and Method References
   - `Method Reference:` A method reference is a shorthand notation for invoking a method or passing it as a parameter. It provides a way to refer to a method without executing it directly, typically by using the :: operator followed by the method name. Method references are often used in functional.
     
   ```java
