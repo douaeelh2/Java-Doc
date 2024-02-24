@@ -97,7 +97,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   
   ## 2. Functional Interfaces
   - A functional interface is an interface that contains only `one abstract method`. It can also contain `default` and `static` methods, but it must have exactly one abstract method.
-  - The @FunctionalInterface notation is optional but recommended to clearly indicate to other developers that this interface is intended to be used as a functional interface. If you try to declare a second abstract method in an interface annotated with @FunctionalInterface, the compiler will generate an error.
+  - The `@FunctionalInterface` notation is optional but recommended to clearly indicate to other developers that this interface is intended to be used as a functional interface. If you try to declare a second abstract method in an interface annotated with `@FunctionalInterface` , the compiler will generate an error.
     
     ```java
         @FunctionalInterface
