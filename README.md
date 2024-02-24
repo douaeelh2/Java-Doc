@@ -63,7 +63,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 ## 4. Running the Program
    - Once the JRE is installed, run your Java program using the `java` command followed by the name of the class containing the `main()` method in your terminal or command prompt.
 
-# Java Basics
+# Java 8 Basics
  ## 1. Lambda Expressions
   **Zero Parameters :**
   
