@@ -17,13 +17,13 @@ This documentation aims to provide an overview of fundamental Java 8 concepts ne
   - [Static and Default Methods in Interface](#java-8-static-and-default-methods-in-interface)
     
 - [Java OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
-  - [Encapsulation](#encapsulation)
+  - [Encapsulation](#java-oop-object-oriented-programming#encapsulation)
   - [Inheritance](#inheritance)
   - [Abstraction](#abstraction)
   - [Polymorphism](#polymorphism)
-  - [Overloading and Overriding](#overloading-and-overriding)
-  - [Aggregation and Composition](#aggregation-and-composition)
-  - [Interface & Abstract Class](#interface--abstract-class)
+  - [Overloading & Overriding](#overloading-&-overriding)
+  - [Aggregation & Composition](#aggregation-&-composition)
+  - [Interface & Abstract Class](#interface-&-abstract-class)
   - [Static](#static)
   - [Final](#final)
 
