@@ -17,7 +17,7 @@ This documentation aims to provide an overview of fundamental Java 8 concepts ne
   - [Static and Default Methods in Interface](#java-8-static-and-default-methods-in-interface)
     
 - [Java OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
-  - [Encapsulation](#java-oop-object-oriented-programming#encapsulation)
+  - [Encapsulation](#Encapsulation)
   - [Inheritance](#inheritance)
   - [Abstraction](#abstraction)
   - [Polymorphism](#polymorphism)
