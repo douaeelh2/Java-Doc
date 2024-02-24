@@ -1,9 +1,9 @@
 # Java 8 Fundamentals for Spring Boot
 
-## Introduction
+# Introduction
 This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 concepts necessary for working with Spring Boot.
 
-## Table of Contents
+# Table of Contents
 - [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
 - [How to Execute a Java Program](#how-to-execute-a-java-program)
 - [Java Basics](#java-basics)
@@ -28,21 +28,21 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Final](#final)
 
 
-## What is JDK, JRE and JVM in Java
- ### 1. JDK (Java Development Kit)
+# What is JDK, JRE and JVM in Java
+ ## 1. JDK (Java Development Kit)
    - The `JDK (Java Development Kit)` is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
      
      
      ![Java JDK JRE and JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/ab43eb26-79a7-4936-8ace-10da5a248a51)
 
- ### 2. JVM (Java Virtual Machine)
+ ## 2. JVM (Java Virtual Machine)
    - The `JVM (Java Virtual Machine)` is a very important component of Java programming language. When you run the Java program, the Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly).
    - `JVM` is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
   
      ![JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2b0cfefd-eae7-405d-8d67-be6492089df4)
      
 
- ### 3. JRE (Java Runtime Environment)
+ ## 3. JRE (Java Runtime Environment)
    - The `Java Runtime Environment (JRE)` provides the libraries, the Java Virtual Machine, and other components to run applets and applications written in the Java programming language.
 JRE doesn’t contain any development tools such as Java compiler, debugger, JShell, etc.
    - If you just want to execute a java program, you can install only JRE. You don’t need JDK because there is no development or compilation of java source code is required.
@@ -50,21 +50,21 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
    ![JRE](https://github.com/douaeelh2/Java-Documentation/assets/127549220/30dc98dd-e601-47c5-b516-1fa1cc03797e)
    
 
-## How to Execute a Java Program
+# How to Execute a Java Program
  ### 1. Writing the Source Code 
    - Begin by writing your Java program using a text editor or an Integrated Development Environment (IDE) such as Eclipse, Netbeans, or IntelliJ IDEA. Save the Java source code in files with the .java extension.
 
- ### 2. Compilation:
+ ## 2. Compilation:
    - Compile your Java source code into bytecode using a Java compiler included in the `Java Development Kit (JDK)`. You can compile your code using the `javac` command-line tool or built-in features of an IDE. Compilation converts your Java source code into `.class ` files containing Java bytecode.
 
-### 3. Runtime Environment (JRE)
+## 3. Runtime Environment (JRE)
    - To execute the Java bytecode, install the `Java Runtime Environment (JRE)`, which includes the `Java Virtual Machine (JVM)` and standard Java class libraries. The JRE provides an environment for executing Java bytecode.
 
-### 4. Running the Program
+## 4. Running the Program
    - Once the JRE is installed, run your Java program using the `java` command followed by the name of the class containing the `main()` method in your terminal or command prompt.
 
-## Java Basics
- ### 1.Lambda Expressions
+# Java Basics
+ ## 1. Lambda Expressions
   **Zero Parameters :**
   
   ```java
@@ -95,7 +95,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
  (a , b) -> { return a + b }; // Multiple statements inside braces
   ```
   
-  ### 2.Functional Interfaces
+  ## 2. Functional Interfaces
   - A functional interface is an interface that contains only `one abstract method`. It can also contain `default` and `static` methods, but it must have exactly one abstract method.
   - The @FunctionalInterface notation is optional but recommended to clearly indicate to other developers that this interface is intended to be used as a functional interface. If you try to declare a second abstract method in an interface annotated with @FunctionalInterface, the compiler will generate an error.
     
@@ -137,7 +137,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
        }
     ```
     
-  ### Functional Interface with Lambda Expressions and Method References
+  ### 2.1 Functional Interface with Lambda Expressions and Method References
   - `Method Reference:` A method reference is a shorthand notation for invoking a method or passing it as a parameter. It provides a way to refer to a method without executing it directly, typically by using the :: operator followed by the method name. Method references are often used in functional.
     
   ```java
