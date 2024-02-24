@@ -1,7 +1,7 @@
 # Java 8 Fundamentals for Spring Boot
 
 ## Introduction
-This documentation aims to provide an overview of fundamental Java 8 concepts necessary for working with Spring Boot.
+This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 concepts necessary for working with Spring Boot.
 
 ## Table of Contents
 - [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
@@ -17,7 +17,7 @@ This documentation aims to provide an overview of fundamental Java 8 concepts ne
   - [Static and Default Methods in Interface](#java-8-static-and-default-methods-in-interface)
     
 - [Java OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
-  - [Encapsulation](#Encapsulation)
+  - [Encapsulation](#encapsulation)
   - [Inheritance](#inheritance)
   - [Abstraction](#abstraction)
   - [Polymorphism](#polymorphism)
@@ -96,7 +96,87 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   ```
   
   ### 2.Functional Interfaces
-  
+  - A functional interface is an interface that contains only `one abstract method`. It can also contain `default` and `static` methods, but it must have exactly one abstract method.
+  - The @FunctionalInterface notation is optional but recommended to clearly indicate to other developers that this interface is intended to be used as a functional interface. If you try to declare a second abstract method in an interface annotated with @FunctionalInterface, the compiler will generate an error.
+    
+    ```java
+        @FunctionalInterface
+        interface MyFunctionalInterface {
+            void myAbstractMethod();
+        
+            // This line would generate an error because it introduces a second abstract method
+            // void anotherAbstractMethod();
+            
+            // This is a default method
+            default void myDefaultMethod() {
+                System.out.println("This is a default method.");
+            }
+        
+            // This is a static method
+            static void myStaticMethod() {
+                System.out.println("This is a static method.");
+            }
+        }
+    ```
+
+    ```java
+       public class Main {
+          public static void main(String[] args) {
+              // Using a lambda expression to implement the abstract method of the functional interface
+              MyFunctionalInterface myInstance = () -> System.out.println("Implementation of myAbstractMethod.");
+              
+              // Calling the abstract method
+              myInstance.myAbstractMethod(); // Output: "Implementation of myAbstractMethod."
+              
+              // Calling the default method
+              myInstance.myDefaultMethod(); // Output: "This is a default method."
+              
+              // Calling the static method
+              MyFunctionalInterface.myStaticMethod(); // Output: "This is a static method."
+          }
+       }
+    ```
+    
+  ### Functional Interface with Lambda Expressions and Method References
+  - `Method Reference:` A method reference is a shorthand notation for invoking a method or passing it as a parameter. It provides a way to refer to a method without executing it directly, typically by using the :: operator followed by the method name. Method references are often used in functional.
+    
+  ```java
+      public class Main {
+        public static void main(String[] args) {
+    
+            // Lambda expression for multiplying two numbers
+            BinaryOperator<Integer> multiplication = (a, b) -> a * b;
+            int result1 = multiplication.apply(5, 3); // result1 will be 15
+    
+            // Using a method reference for addition
+            BinaryOperator<Integer> addition = Main::add;
+            int result2 = addition.apply(10, 5); // result2 will be 15
+    
+            // Custom functional interface with an instance main method
+            Operation subtraction = (a, b) -> a - b;
+            int result3 = subtraction.operate(10, 3); // result3 will be 7
+    
+            Operation division =(a, b) -> a / b;
+            int result4 = division.operate(15, 5); // result4 will be 3
+    
+            System.out.println("Multiplication: " + result1);
+            System.out.println("Addition: " + result2);
+            System.out.println("Subtraction: " + result3);
+            System.out.println("Division: " + result4);
+        }
+    
+              // Static method for addition
+              static int add(int a, int b) {
+                  return a + b;
+              }
+          }
+          
+          // Custom functional interface with an instance main method
+          @FunctionalInterface
+          interface Operation {
+              int operate(int a, int b);
+          }
+  ```
 
 ## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
