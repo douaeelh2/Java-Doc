@@ -136,35 +136,51 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
           }
        }
     ```
+
+  ### Functional Interface with Lambda Expression
+  
+   ```java
+        public class Main {
+          public static void main(String[] args) {
+      
+              // Lambda expression for multiplying two numbers
+              BinaryOperator<Integer> multiplication = (a, b) -> a * b;
+              int result1 = multiplication.apply(5, 3); // result1 will be 15
+      
+              // Custom functional interface with an instance main method
+              Operation subtraction = (a, b) -> a - b;
+              int result3 = subtraction.operate(10, 3); // result3 will be 7
+      
+              Operation division = (a, b) -> a / b;
+              int result4 = division.operate(15, 5); // result4 will be 3
+      
+              System.out.println("Multiplication: " + result1);
+              System.out.println("Subtraction: " + result3);
+              System.out.println("Division: " + result4);
+              }
+            }
+            
+            // Custom functional interface with an instance main method
+            @FunctionalInterface
+            interface Operation {
+                int operate(int a, int b);
+           }
+   ```
     
-  ### Functional Interface with Lambda Expressions and Method References
-  - `Method Reference:` A method reference is a shorthand notation for invoking a method or passing it as a parameter. It provides a way to refer to a method without executing it directly, typically by using the :: operator followed by the method name. Method references are often used in functional.
+  ### Functional Interface with Method Reference (Methode Instance)
+  - `Method Reference:` A method reference is a shorthand notation for invoking a method or passing it as a parameter. It provides a way to refer to a method without executing it directly, typically by using the `::` operator followed by the method name. Method references are often used in functional.
     
   ```java
       public class Main {
         public static void main(String[] args) {
     
-            // Lambda expression for multiplying two numbers
-            BinaryOperator<Integer> multiplication = (a, b) -> a * b;
-            int result1 = multiplication.apply(5, 3); // result1 will be 15
-    
             // Using a method reference for addition
             BinaryOperator<Integer> addition = Main::add;
             int result2 = addition.apply(10, 5); // result2 will be 15
-    
-            // Custom functional interface with an instance main method
-            Operation subtraction = (a, b) -> a - b;
-            int result3 = subtraction.operate(10, 3); // result3 will be 7
-    
-            Operation division = (a, b) -> a / b;
-            int result4 = division.operate(15, 5); // result4 will be 3
-    
-            System.out.println("Multiplication: " + result1);
+  
             System.out.println("Addition: " + result2);
-            System.out.println("Subtraction: " + result3);
-            System.out.println("Division: " + result4);
 
-            // Other examples of using lambda expressions and method references
+            // Using a method reference for conversion to upper case
             UnaryOperator<String> toUpperCase = String::toUpperCase;
             String upperCaseString = toUpperCase.apply("hello"); // upperCaseString will be "HELLO"
     
@@ -175,12 +191,6 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
               static int add(int a, int b) {
                   return a + b;
               }
-          }
-          
-          // Custom functional interface with an instance main method
-          @FunctionalInterface
-          interface Operation {
-              int operate(int a, int b);
           }
   ```
 
