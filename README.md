@@ -384,6 +384,24 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
       }
   }
 ```
+
+  - `Static Method:`static method is a method that belongs to the class rather than to any specific instance of the class. This means you can call a static method without creating an instance of the class.
+  - `No Access to Instance Variables `: Static methods cannot access instance variables directly because they don't belong to any instance. However, they can access static variables.
+  - Cannot Use `this` Keyword Since static methods are not tied to any particular instance, they cannot use the this keyword to refer to the current instance.
+  - Can Call other `static` methods directly.
+    
+  ```java
+       public class MyClass {
+      
+            static void myStaticMethod() {
+                System.out.println("This is a static method.");
+            }
+        
+            public static void main(String[] args) {
+                MyClass.myStaticMethod();
+              }
+            }
+  ```
 ```java
 public class MyClass {
     private static int count = 0; // Static variable
@@ -405,23 +423,6 @@ public class MyClass {
       }
   }
 ```
-  - `Static Method:`static method is a method that belongs to the class rather than to any specific instance of the class. This means you can call a static method without creating an instance of the class.
-  - `No Access to Instance Variables `: Static methods cannot access instance variables directly because they don't belong to any instance. However, they can access static variables.
-  - Cannot Use `this` Keyword Since static methods are not tied to any particular instance, they cannot use the this keyword to refer to the current instance.
-  - Can Call other `static` methods directly.
-    
-  ```java
-       public class MyClass {
-      
-            static void myStaticMethod() {
-                System.out.println("This is a static method.");
-            }
-        
-            public static void main(String[] args) {
-                MyClass.myStaticMethod();
-              }
-            }
-  ```
   - `Static Class:` In Java, classes themselves cannot be declared as static. They are loaded into memory when the program starts, and each instance of the class has its own memory. However, nested static classes are allowed. These nested classes belong to the outer class and can be instantiated without requiring an instance of the outer class.
     
  ```java
