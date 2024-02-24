@@ -7,7 +7,7 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
 - [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
 - [How to Execute a Java Program](#how-to-execute-a-java-program)
 - [Java 8 Basics](#java-8-basics)
-  - [Lambda Expressions](##java-lambda-expressions)
+  - [Lambda Expressions](#java-lambda-expressions)
   - [Functional Interfaces](#java-functional-interfaces)
   - [Method References](#java-method-references)
   - [Stream API](#java-stream-api)
@@ -156,14 +156,20 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
             Operation subtraction = (a, b) -> a - b;
             int result3 = subtraction.operate(10, 3); // result3 will be 7
     
-            Operation division =(a, b) -> a / b;
+            Operation division = (a, b) -> a / b;
             int result4 = division.operate(15, 5); // result4 will be 3
     
             System.out.println("Multiplication: " + result1);
             System.out.println("Addition: " + result2);
             System.out.println("Subtraction: " + result3);
             System.out.println("Division: " + result4);
-        }
+
+            // Other examples of using lambda expressions and method references
+            UnaryOperator<String> toUpperCase = String::toUpperCase;
+            String upperCaseString = toUpperCase.apply("hello"); // upperCaseString will be "HELLO"
+    
+            System.out.println("Uppercase String: " + upperCaseString);
+            }
     
               // Static method for addition
               static int add(int a, int b) {
@@ -177,6 +183,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
               int operate(int a, int b);
           }
   ```
+
 
 ## Java OOP (Object-Oriented Programming)
  ### 1. Encapsulation 
