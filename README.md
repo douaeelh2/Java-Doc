@@ -413,7 +413,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 
       ## 5. Stream API
     The Stream API in the `java.util.stream` package in Java offers an simple approach to describe operations to be executed on a dataset.
-    ###Java Stream Creation:
+      ### Java Stream Creation
     -obtain a stream from an existing array:
     ```java
     private static Employee[] arrayOfEmps = {
