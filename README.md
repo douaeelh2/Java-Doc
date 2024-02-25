@@ -360,7 +360,6 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   - A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
     `HashSet:`
     - It is implemented using a hash table. It does not maintain any order of elements; instead, it uses the hash code of the objects to store elements.
-    -  Elements are not ordered. There is no guarantee of the order in which elements are stored.
     -  Does not allow duplicate elements. If you try to add duplicates, they will be ignored.
     -  Allows a single null element.
      
@@ -386,8 +385,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
          
     `TreeSet:`
     - It is implemented using a red-black tree. It stores elements in sorted order (either natural ordering or specified by a comparator).
-    -  Also does not allow duplicate elements. Trying to add duplicates will not result in adding the duplicate element.
-    -  Elements are iterated in sorted order, according to the natural order or the comparator used.
+    -  Also does not allow duplicate elements.
     -  Does not allow null elements. If you try to add a null element, it will throw a NullPointerException.
      
          ```java
