@@ -442,13 +442,59 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     Stream<Employee> empStream = empStreamBuilder.build();
     ```
     ### Java Stream Operations
-    **Intermediate Operations:**
-    `filter` Returns a stream consisting of elements that match the given predicate.
-    ```java
-    List<String> fruits = Arrays.asList("apple", "banana", "orange");
-    Stream<String> result = fruits.stream().filter(s -> s.startsWith("a"));
-    ```
-    
+    **Intermediate Operations:** <br>
+    - `filter`<br>
+      Returns a stream consisting of elements that match the given predicate:
+      
+      ```java
+      List<String> fruits = Arrays.asList("apple", "banana", "orange");
+      Stream<String> result = fruits.stream().filter(s -> s.startsWith("a"));
+      System.out.println(result);//apple
+      ```
+    - `map`<br>
+      Returns a stream consisting of the results of applying the given function to the elements of the stream:
+      
+      ```java
+      List<String> fruits = Arrays.asList("apple", "banana", "orange");
+      Stream<Integer> result = fruits.stream().map(String::length);
+      System.out.println(result);//prints the length of each element of the fruits list
+      ```
+      
+    - `distinct`<br>
+      Returns a stream consisting of the distinct elements of the stream:
+      
+      ```java
+      List<String> numbers = Arrays.asList("1", "2", "2", "3", "4", "4");
+      Stream<String> result = numbers.stream().distinct();
+      result.forEach(System.out::println);//1 2 3 4
+      ```
+      
+
+    - `sorted`<br>
+      Returns a stream consisting of the elements of the stream sorted:
+      
+      ```java
+      List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 2);
+      Stream<Integer> result = numbers.stream().sorted();
+      result.forEach(System.out::println);//1 1 2 3 4
+      
+      ```
+      
+    - `flatMap`<br>
+      Returns a stream consisting of the results of applying the given function to the elements of the stream:
+      
+      ```java
+      List<List<Integer>> listOfLists = Arrays.asList(
+            Arrays.asList(1, 2, 3),
+            Arrays.asList(4, 5, 6),
+            Arrays.asList(7, 8, 9)
+        );
+      List<Integer> flattenedList = listOfLists.stream()
+                                                .flatMap(List::stream)
+                                                .collect(Collectors.toList());
+      System.out.println(flattenedList);//[1, 2, 3, 4, 5, 6, 7, 8, 9]
+      ```
+      
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
    - `Encapsulation` is the mechanism of bundling the data `(attributes)` and the methods `(functions)` that operate on the data into a single unit called a class.
