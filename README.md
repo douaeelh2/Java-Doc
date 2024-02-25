@@ -369,7 +369,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                     }
                 }
             }
-      ```
+         ```
+         
     - `TreeSet:` It is implemented using a red-black tree. It stores elements in sorted order (either natural ordering or specified by a comparator).
       -  Elements are sorted either in their natural ordering (if they implement Comparable) or using a comparator provided at creation time.
       -  Also does not allow duplicate elements. Trying to add duplicates will not result in adding the duplicate element.
@@ -391,7 +392,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                     }
                 }
             }
-      ```
+         ```
+         
     - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
      
 # Java OOP (Object-Oriented Programming)
