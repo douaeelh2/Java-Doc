@@ -196,20 +196,21 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   ### Predicate interface
   - `Predicate interface` is a functional interface that represents a function that takes an argument and returns a `boolean` value, often used for testing a condition. This Predicate interface is widely used in the context of lambda expressions and methods of the Stream class to perform filtering or selecting elements.
     
-  ```java
-      import java.util.function.Predicate;
-      
+  ```java      
       public class Main {
           public static void main(String[] args) {
+
               // Using a pre-defined functional interface (Predicate) for checking even numbers
               Predicate<Integer> isEven = num -> num % 2 == 0;
               boolean result = isEven.test(10); // result will be true
+
               System.out.println("Is 10 even? " + result);
       
               // Using a Predicate for string comparison
               Predicate<String> test = tes -> "toto".equals(tes);
-              boolean result25 = test.test("toto");
-              System.out.println("Is the string 'toto'? " + result25);
+              boolean result = test.test("toto");
+
+              System.out.println("Is the string 'toto'? " + result); // result will be true
           }
       }
   ```
@@ -297,62 +298,50 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
  ### Map:
   - A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include:
     - `HashMap:` This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
+      
+      ```java
+          public class Main {
+              public static void main(String[] args) {
+                  Map<String, Integer> hashMap = new HashMap<>();
+          
+                  hashMap.put("John", 25);
+                  hashMap.put("Alice", 30);
+                  hashMap.put("Bob", 20);
+          
+                  for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+                      System.out.print(entry.getKey() + " - " + entry.getValue());  //Output : Bob - 20  Alice - 30  John - 25
+                      System.out.print("  ");
+                  }
+              }
+          }
+      ```
     - `TreeMap:` This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
-    - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
       
-      
-    ```java
-        public class MapExample {
+      ```java
+         public class Main {
             public static void main(String[] args) {
-                // Using HashMap
-                Map<String, Integer> ageHashMap = new HashMap<>();
-                
-                // Adding key-value pairs to HashMap
-                ageHashMap.put("Alice", 30);
-                ageHashMap.put("Bob", 25);
-                ageHashMap.put("Charlie", 35);
-                
-                // Printing HashMap (Note: The order is not guaranteed)
-                System.out.println("HashMap: " + ageHashMap);
-                
-                // Retrieving value by key from HashMap
-                int aliceAgeHashMap = ageHashMap.get("Alice");
-                System.out.println("Alice's age with HashMap: " + aliceAgeHashMap);
-  
+                Map<String, Integer> treeMap = new TreeMap<>();
+        
+                treeMap.put("John", 25);
+                treeMap.put("Alice", 30);
+                treeMap.put("Bob", 20);
+        
+                for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
+                    System.out.print(entry.getKey() + " - " + entry.getValue());  //Output : Alice - 30  Bob - 20  John - 25
+                  System.out.print("  ");
+                }
             }
         }
-
-    ```
-    ```java
-      public class MapExample {
-            public static void main(String[] args) {
-               // Using TreeMap
-                Map<String, Integer> ageTreeMap = new TreeMap<>();
-                
-                // Adding key-value pairs to TreeMap
-                ageTreeMap.put("Alice", 30);
-                ageTreeMap.put("Bob", 25);
-                ageTreeMap.put("Charlie", 35);
-                
-                // Printing TreeMap (Note: Keys are sorted in natural order)
-                System.out.println("\nTreeMap: " + ageTreeMap);
-                
-                // Retrieving value by key from TreeMap
-                int aliceAgeTreeMap = ageTreeMap.get("Alice");
-                System.out.println("Alice's age with TreeMap: " + aliceAgeTreeMap);
-        }
-      }
-    ```
-   - We first use a `HashMap` to store key-value pairs. We add three pairs to the map, but note that the order in which the keys are printed is not guaranteed to be the same as the insertion order. This is a characteristic of HashMap.
-  - We retrieve Alice's age from the `HashMap` and print it.
-  - Then, we use a TreeMap to store key-value pairs. Again, we add the same three pairs to the map. However, when printing the map, you'll notice that the keys are sorted in natural order (alphabetical order, since keys are strings). This is a characteristic of `TreeMap`.
+      ```
+    - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
 
   ### Set:
   - A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
-    - `HashSet:` It is implemented using a hash table.It does not maintain any order of elements; instead, it uses the hash code of the objects to store elements.
-      -  Elements are not ordered. There is no guarantee of the order in which elements are stored.
-      -  Does not allow duplicate elements. If you try to add duplicates, they will be ignored.
-      -  Allows a single null element.
+    `HashSet:`
+    - It is implemented using a hash table. It does not maintain any order of elements; instead, it uses the hash code of the objects to store elements.
+    -  Elements are not ordered. There is no guarantee of the order in which elements are stored.
+    -  Does not allow duplicate elements. If you try to add duplicates, they will be ignored.
+    -  Allows a single null element.
      
          ```java
             public class Main {
@@ -363,19 +352,19 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                     hashSet.add("orange");
                     hashSet.add("banana");
             
-                    System.out.println("Elements in HashSet:");
+                    System.out.print("Elements in HashSet:");
                     for (String fruit : hashSet) {
-                        System.out.println(fruit); //Output : Elements in TreeSet: banana  orange  apple
+                        System.out.print(fruit); //Output : Elements in HashSet: banana  orange  apple
                     }
                 }
             }
          ```
          
-    - `TreeSet:` It is implemented using a red-black tree. It stores elements in sorted order (either natural ordering or specified by a comparator).
-      -  Elements are sorted either in their natural ordering (if they implement Comparable) or using a comparator provided at creation time.
-      -  Also does not allow duplicate elements. Trying to add duplicates will not result in adding the duplicate element.
-      -  Elements are iterated in sorted order, according to the natural order or the comparator used.
-      -  Does not allow null elements. If you try to add a null element, it will throw a NullPointerException.
+    `TreeSet:`
+    - It is implemented using a red-black tree. It stores elements in sorted order (either natural ordering or specified by a comparator).
+    -  Also does not allow duplicate elements. Trying to add duplicates will not result in adding the duplicate element.
+    -  Elements are iterated in sorted order, according to the natural order or the comparator used.
+    -  Does not allow null elements. If you try to add a null element, it will throw a NullPointerException.
      
          ```java
             public class Main {
@@ -386,7 +375,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                     treeSet.add("orange");
                     treeSet.add("banana");
             
-                    System.out.println("Elements in TreeSet:");
+                    System.out.print("Elements in TreeSet:");
                     for (String fruit : treeSet) {
                         System.out.print(fruit);  //Output : Elements in TreeSet: apple  banana  orange
                     }
