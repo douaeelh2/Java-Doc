@@ -442,7 +442,12 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     Stream<Employee> empStream = empStreamBuilder.build();
     ```
     ### Java Stream Operations
-    ****Intermediate Operations:****
+    **Intermediate Operations:**
+    ****filter****
+    `Returns a stream consisting of elements that match the given predicate.`
+    List<String> fruits = Arrays.asList("apple", "banana", "orange");
+    Stream<String> result = fruits.stream().filter(s -> s.startsWith("a"));
+    
     
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
