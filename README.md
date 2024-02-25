@@ -494,6 +494,26 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                                                 .collect(Collectors.toList());
       System.out.println(flattenedList);//[1, 2, 3, 4, 5, 6, 7, 8, 9]
       ```
+
+    **Terminal Operations:** <br>
+    - `forEach`<br>
+      Performs an action for each element of the stream:
+      
+      ```java
+      List<String> fruits = Arrays.asList("apple", "banana", "orange");
+      fruits.stream().forEach(System.out::println);//prints each element of the list
+      ```
+
+   - `collect`<br>
+      
+      
+      ```java
+      List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
+      List<String> modifiedNames = names.stream()
+                .filter(name -> name.length() > 4)
+                .map(String::toUpperCase)
+                .collect(Collectors.toList());//collect the result into a list
+      ```
       
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
