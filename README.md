@@ -274,7 +274,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
      ```
      
  ### List:
-    - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include ArrayList, LinkedList, etc.
+   - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include ArrayList, LinkedList, etc.
   
      ```java
         public class ListExample {
@@ -295,12 +295,12 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
      ```
 
  ### Map:
-    - A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include:
+  - A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include:
      `HashMap:` This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
      `TreeMap:` This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
      `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
       
-     ```java
+    ```java
         public class MapExample {
             public static void main(String[] args) {
                 // Using HashMap
@@ -342,7 +342,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
         }
       }
     ```
-  - We first use a `HashMap` to store key-value pairs. We add three pairs to the map, but note that the order in which the keys are printed is not guaranteed to be the same as the insertion order. This is a characteristic of HashMap.
+   - We first use a `HashMap` to store key-value pairs. We add three pairs to the map, but note that the order in which the keys are printed is not guaranteed to be the same as the insertion order. This is a characteristic of HashMap.
   - We retrieve Alice's age from the `HashMap` and print it.
   - Then, we use a TreeMap to store key-value pairs. Again, we add the same three pairs to the map. However, when printing the map, you'll notice that the keys are sorted in natural order (alphabetical order, since keys are strings). This is a characteristic of `TreeMap`.
 
