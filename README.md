@@ -327,8 +327,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                   hashMap.put("Bob", 20);
           
                   for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
-                      System.out.print(entry.getKey() + " - " + entry.getValue());  //Output : Bob - 20  Alice - 30  John - 25
-                      System.out.print("  ");
+                      System.out.print(entry.getKey() + " - " + entry.getValue());
+                      System.out.print("  ");  //Output : Bob - 20  Alice - 30  John - 25
                   }
               }
           }
@@ -348,8 +348,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                 treeMap.put("Bob", 20);
         
                 for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
-                    System.out.print(entry.getKey() + " - " + entry.getValue());  //Output : Alice - 30  Bob - 20  John - 25
-                  System.out.print("  ");
+                    System.out.print(entry.getKey() + " - " + entry.getValue());
+                  System.out.print("  "); //Output : Alice - 30  Bob - 20  John - 25
                 }
             }
         }
