@@ -274,7 +274,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
      ```
      
  ### List:
-   - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include ArrayList, LinkedList, etc.
+   - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include `ArrayList`, `LinkedList` , etc.
   
      ```java
         public class ListExample {
@@ -299,6 +299,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     - `HashMap:` This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
     - `TreeMap:` This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
     - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
+      
       
     ```java
         public class MapExample {
@@ -348,27 +349,50 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 
   ### Set:
   - A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
-
-     ```java
-        public class SetExample {
-            public static void main(String[] args) {
-                // Creating a Set of integers
-                Set<Integer> numbers = new HashSet<>();
-        
-                // Adding elements to the Set
-                numbers.add(5);
-                numbers.add(10);
-                numbers.add(15);
-                numbers.add(5); // This duplicate value will be ignored
-        
-                // Printing all elements of the Set
-                System.out.println("Numbers:");
-                for (int number : numbers) {
-                    System.out.println(number);
+    - `HashSet:` It is implemented using a hash table.It does not maintain any order of elements; instead, it uses the hash code of the objects to store elements.
+      -  Elements are not ordered. There is no guarantee of the order in which elements are stored.
+      -  Does not allow duplicate elements. If you try to add duplicates, they will be ignored.
+      -  Allows a single null element.
+     
+         ```java
+            public class Main {
+                public static void main(String[] args) {
+                    HashSet<String> hashSet = new HashSet<>();
+                    hashSet.add("banana");
+                    hashSet.add("apple");
+                    hashSet.add("orange");
+                    hashSet.add("banana");
+            
+                    System.out.println("Elements in HashSet:");
+                    for (String fruit : hashSet) {
+                        System.out.println(fruit); //Output : Elements in TreeSet: banana  orange  apple
+                    }
                 }
             }
-        }
-     ```
+      ```
+    - `TreeSet:` It is implemented using a red-black tree. It stores elements in sorted order (either natural ordering or specified by a comparator).
+      -  Elements are sorted either in their natural ordering (if they implement Comparable) or using a comparator provided at creation time.
+      -  Also does not allow duplicate elements. Trying to add duplicates will not result in adding the duplicate element.
+      -  Elements are iterated in sorted order, according to the natural order or the comparator used.
+      -  Does not allow null elements. If you try to add a null element, it will throw a NullPointerException.
+     
+         ```java
+            public class Main {
+                public static void main(String[] args) {
+                    TreeSet<String> treeSet = new TreeSet<>();
+                    treeSet.add("banana");
+                    treeSet.add("apple");
+                    treeSet.add("orange");
+                    treeSet.add("banana");
+            
+                    System.out.println("Elements in TreeSet:");
+                    for (String fruit : treeSet) {
+                        System.out.print(fruit);  //Output : Elements in TreeSet: apple  banana  orange
+                    }
+                }
+            }
+      ```
+    - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
      
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
