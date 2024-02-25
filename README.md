@@ -504,7 +504,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
       fruits.stream().forEach(System.out::println);//prints each element of the list
       ```
 
-   - `collect`<br>
+    - `collect`<br>
       
       
       ```java
