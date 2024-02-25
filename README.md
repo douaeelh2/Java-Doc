@@ -443,8 +443,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     ```
     ### Java Stream Operations
     **Intermediate Operations:**
-    ****filter****
-    Returns a stream consisting of elements that match the given predicate.
+    `filter` Returns a stream consisting of elements that match the given predicate.
     ```java
     List<String> fruits = Arrays.asList("apple", "banana", "orange");
     Stream<String> result = fruits.stream().filter(s -> s.startsWith("a"));
