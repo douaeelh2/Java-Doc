@@ -256,7 +256,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   
   ![Java-Collections-Framework-Hierarchy](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2837ac14-8fc7-41a8-b72c-680fe454136d)
 
-   `Collection:` This is the root interface in the collection hierarchy. It defines basic operations applicable to all collections such as adding, removing, and querying elements. Use this when you need a general-purpose collection to store a group of objects without caring about the specific order or uniqueness of elements.
+   ### Collection:
+  - This is the root interface in the collection hierarchy. It defines basic operations applicable to all collections such as adding, removing, and querying elements. Use this when you need a general-purpose collection to store a group of objects without caring about the specific order or uniqueness of elements.
       
      ```java
         public class CollectionExample {
@@ -272,7 +273,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
         }
      ```
      
-     `List:` An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include ArrayList, LinkedList, etc.
+      ### List:
+    - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include ArrayList, LinkedList, etc.
   
      ```java
         public class ListExample {
@@ -292,10 +294,11 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
         }
      ```
 
-    `Map:` A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include:
-    - HashMap: This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
-    - TreeMap: This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
-    - LinkedHashMap: This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
+     ### Map:
+    - A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include:
+     `HashMap:` This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
+     `TreeMap:` This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
+     `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
       
      ```java
         public class MapExample {
@@ -343,7 +346,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   - We retrieve Alice's age from the `HashMap` and print it.
   - Then, we use a TreeMap to store key-value pairs. Again, we add the same three pairs to the map. However, when printing the map, you'll notice that the keys are sorted in natural order (alphabetical order, since keys are strings). This is a characteristic of `TreeMap`.
 
-    `Set:` A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
+    ### Set:
+    - A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
 
      ```java
         public class SetExample {
