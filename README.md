@@ -139,6 +139,8 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   ### Functional Interface with Lambda Expression
   
    ```java
+      import java.util.function.BinaryOperator;
+
         public class Main {
           public static void main(String[] args) {
       
@@ -170,6 +172,9 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   - `Method Reference:` A method reference is a shorthand notation for invoking a method or passing it as a parameter. It provides a way to refer to a method without executing it directly, typically by using the `::` operator followed by the method name. Method references are often used in functional.
     
   ```java
+    import java.util.function.BinaryOperator;
+    import java.util.function.UnaryOperator;
+
       public class Main {
         public static void main(String[] args) {
     
@@ -196,7 +201,9 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   ### Predicate interface
   - `Predicate interface` is a functional interface that represents a function that takes an argument and returns a `boolean` value, often used for testing a condition. This Predicate interface is widely used in the context of lambda expressions and methods of the Stream class to perform filtering or selecting elements.
     
-  ```java      
+  ```java
+      import java.util.function.Predicate;
+
       public class Main {
           public static void main(String[] args) {
 
@@ -261,23 +268,30 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
   - This is the root interface in the collection hierarchy. It defines basic operations applicable to all collections such as adding, removing, and querying elements. Use this when you need a general-purpose collection to store a group of objects without caring about the specific order or uniqueness of elements.
       
      ```java
-        public class CollectionExample {
-          public static void main(String[] args) {
-            Collection<String> names = new ArrayList<>();
-                
+        import java.util.ArrayList;
+        import java.util.Collection;
+        
+        public class Main {
+            public static void main(String[] args) {
+                Collection<String> names = new ArrayList<>();
+        
                 names.add("Alice");
                 names.add("Bob");
                 names.add("Charlie");
-                
-                System.out.println("Collection: " + names);
+        
+                System.out.println("Collection : " + names); //Output : Collection : [Alice, Bob, Charlie]
             }
         }
+
      ```
      
  ### List:
    - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include `ArrayList`, `LinkedList` , etc.
   
      ```java
+        import java.util.ArrayList;
+        import java.util.List;
+        
         public class ListExample {
             public static void main(String[] args) {
                 List<Integer> numbers = new ArrayList<>();
@@ -286,13 +300,14 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                 numbers.add(20);
                 numbers.add(30);
                 
-                System.out.println("List: " + numbers);
+                System.out.println("List: " + numbers); //Output : List: [10, 20, 30]
                 
-                // Accessing element by index
+                // Accessing an element by its index
                 int secondElement = numbers.get(1);
-                System.out.println("Second element: " + secondElement);
+                System.out.println("Second element: " + secondElement);  //Output : Second element: 20
             }
         }
+
      ```
 
  ### Map:
@@ -300,6 +315,9 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     - `HashMap:` This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
       
       ```java
+        import java.util.HashMap;
+        import java.util.Map;
+      
           public class Main {
               public static void main(String[] args) {
                   Map<String, Integer> hashMap = new HashMap<>();
@@ -318,6 +336,9 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     - `TreeMap:` This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
       
       ```java
+         import java.util.TreeMap;
+         import java.util.Map;
+      
          public class Main {
             public static void main(String[] args) {
                 Map<String, Integer> treeMap = new TreeMap<>();
@@ -344,9 +365,12 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     -  Allows a single null element.
      
          ```java
+            import java.util.HashSet;
+            import java.util.Set;
+         
             public class Main {
                 public static void main(String[] args) {
-                    HashSet<String> hashSet = new HashSet<>();
+                    Set<String> hashSet = new HashSet<>();
                     hashSet.add("banana");
                     hashSet.add("apple");
                     hashSet.add("orange");
@@ -367,9 +391,12 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
     -  Does not allow null elements. If you try to add a null element, it will throw a NullPointerException.
      
          ```java
+            import java.util.TreeSet;
+            import java.util.Set;
+         
             public class Main {
                 public static void main(String[] args) {
-                    TreeSet<String> treeSet = new TreeSet<>();
+                    Set<String> treeSet = new TreeSet<>();
                     treeSet.add("banana");
                     treeSet.add("apple");
                     treeSet.add("orange");
