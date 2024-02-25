@@ -411,8 +411,37 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
          
     - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
 
-     
-
+      ## 5. Stream API
+    The Stream API in the `java.util.stream` package in Java offers an simple approach to describe operations to be executed on a dataset.
+    ###Java Stream Creation:
+    -obtain a stream from an existing array:
+    ```java
+    private static Employee[] arrayOfEmps = {
+      new Employee(1, "Jeff Bezos", 100000.0), 
+      new Employee(2, "Bill Gates", 200000.0), 
+      new Employee(3, "Mark Zuckerberg", 300000.0)
+    };
+    Stream.of(arrayOfEmps);
+    ```
+    -obtain a stream from an existing list:
+    ```java
+    private static List<Employee> empList = Arrays.asList(arrayOfEmps);
+    empList.stream();
+    ```
+    -create a stream from individual objects:
+    ```java
+    Stream.of(arrayOfEmps[0], arrayOfEmps[1], arrayOfEmps[2]);
+    ```
+    
+    -create a stream using Stream.builder():
+    ```java
+    Stream.Builder<Employee> empStreamBuilder = Stream.builder();
+    empStreamBuilder.accept(arrayOfEmps[0]);
+    empStreamBuilder.accept(arrayOfEmps[1]);
+    empStreamBuilder.accept(arrayOfEmps[2]);
+    Stream<Employee> empStream = empStreamBuilder.build();
+    ```
+    
     
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
