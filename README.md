@@ -358,9 +358,10 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
 
   ### Set:
   - A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
+    
     `HashSet:`
     - It is implemented using a hash table. It does not maintain any order of elements; instead, it uses the hash code of the objects to store elements.
-    -  Does not allow duplicate elements. If you try to add duplicates, they will be ignored.
+    -  If you try to add duplicates, they will be ignored.
     -  Allows a single null element.
      
          ```java
