@@ -1,0 +1,3 @@
+ ## 5. Stream API
+    The Stream API in the `java.util.stream` package in Java offers an expressive and concise approach to describe operations to be executed on a dataset.
+    ###Java Stream Creation:
