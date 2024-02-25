@@ -410,7 +410,12 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
          ```
          
     - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
+
      
+  ## 5. Stream API
+    The Stream API in the `java.util.stream` package in Java offers an expressive and concise approach to describe operations to be executed on a dataset.
+    ###Java Stream Creation:
+    
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
    - `Encapsulation` is the mechanism of bundling the data `(attributes)` and the methods `(functions)` that operate on the data into a single unit called a class.
