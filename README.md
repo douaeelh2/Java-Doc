@@ -292,25 +292,56 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
         }
      ```
 
-    `Map:` A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include HashMap, TreeMap, LinkedHashMap, etc.
-
+    `Map:` A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include:
+    - HashMap: This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
+    - TreeMap: This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
+    - LinkedHashMap: This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
+      
      ```java
         public class MapExample {
             public static void main(String[] args) {
-                Map<String, Integer> ageMap = new HashMap<>();
+                // Using HashMap
+                Map<String, Integer> ageHashMap = new HashMap<>();
                 
-                ageMap.put("Alice", 30);
-                ageMap.put("Bob", 25);
-                ageMap.put("Charlie", 35);
+                // Adding key-value pairs to HashMap
+                ageHashMap.put("Alice", 30);
+                ageHashMap.put("Bob", 25);
+                ageHashMap.put("Charlie", 35);
                 
-                System.out.println("Map: " + ageMap);
+                // Printing HashMap (Note: The order is not guaranteed)
+                System.out.println("HashMap: " + ageHashMap);
                 
-                // Retrieving value by key
-                int aliceAge = ageMap.get("Alice");
-                System.out.println("Alice's age: " + aliceAge);
+                // Retrieving value by key from HashMap
+                int aliceAgeHashMap = ageHashMap.get("Alice");
+                System.out.println("Alice's age with HashMap: " + aliceAgeHashMap);
+  
             }
         }
+
     ```
+    ```java
+      public class MapExample {
+            public static void main(String[] args) {
+               // Using TreeMap
+                Map<String, Integer> ageTreeMap = new TreeMap<>();
+                
+                // Adding key-value pairs to TreeMap
+                ageTreeMap.put("Alice", 30);
+                ageTreeMap.put("Bob", 25);
+                ageTreeMap.put("Charlie", 35);
+                
+                // Printing TreeMap (Note: Keys are sorted in natural order)
+                System.out.println("\nTreeMap: " + ageTreeMap);
+                
+                // Retrieving value by key from TreeMap
+                int aliceAgeTreeMap = ageTreeMap.get("Alice");
+                System.out.println("Alice's age with TreeMap: " + aliceAgeTreeMap);
+        }
+      }
+    ```
+  - We first use a `HashMap` to store key-value pairs. We add three pairs to the map, but note that the order in which the keys are printed is not guaranteed to be the same as the insertion order. This is a characteristic of HashMap.
+  - We retrieve Alice's age from the `HashMap` and print it.
+  - Then, we use a TreeMap to store key-value pairs. Again, we add the same three pairs to the map. However, when printing the map, you'll notice that the keys are sorted in natural order (alphabetical order, since keys are strings). This is a characteristic of `TreeMap`.
 
     `Set:` A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
 
