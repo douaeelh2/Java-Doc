@@ -476,7 +476,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
           result.forEach(System.out::println);  // Output : 1 2 3 4
       ```
     - `reduce():` Reduces the elements of the Stream using a specific associative operation (e.g., sum, product, concatenation, etc.).
-    - 
+      
       ```java
           List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
           Optional<Integer> sum = numbers.stream()
@@ -507,7 +507,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
           System.out.println(flattenedList);  // Output : [1, 2, 3, 4, 5, 6, 7, 8, 9]
       ```
       
-       - `skip():` Skips the specified number of elements from the beginning of the Stream.
+    - `skip():` Skips the specified number of elements from the beginning of the Stream.
        
        ```java
           List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -517,7 +517,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
           System.out.println(skippedNumbers); // Output: [6, 7, 8, 9, 10]
        ```
        
-    - `limit():` Limits the size of the Stream to the specified number of elements.
+   - `limit():` Limits the size of the Stream to the specified number of elements.
 
       ```java
           List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
