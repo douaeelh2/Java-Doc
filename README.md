@@ -14,6 +14,9 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Stream API](#java-stream-api)
   - [Optional Class](#java-optional-class)
   - [StringJoiner Class](#java-stringjoiner-class)
+- [Java 11 Basics](#java-11-basics)
+  - [New String Methods](#java-new-string-methods)
+  - [HttpClient API](#java-httpclient-api)
     
 - [Java OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
   - [Encapsulation](#encapsulation)
@@ -544,7 +547,40 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
                     .map(String::toUpperCase)
                     .collect(Collectors.toList());//collect the result into a list
       ```
-      
+# Java 11 Basics
+ ## 1. New String Methods 
+  - `isBlank():` method was introduced in Java 11 in the java.lang.String class. It allows you to check if a string is empty or contains only whitespace characters.It returns true if the string is empty or contains only whitespace characters and false if the string contains at least one non-whitespace character.
+
+    ```java
+        public class IsBlankExample {
+            public static void main(String[] args) {
+                String str1 = ""; // Empty string
+                String str2 = "    "; // String containing only whitespace characters
+                String str3 = "Hello"; // String containing non-whitespace characters
+                String str4 = "   Hello   "; // String containing whitespace characters along with text
+        
+                System.out.println("str1 is blank: " + str1.isBlank()); // true
+                System.out.println("str2 is blank: " + str2.isBlank()); // true
+                System.out.println("str3 is blank: " + str3.isBlank()); // false
+                System.out.println("str4 is blank: " + str4.isBlank()); // false
+            }
+          }
+           
+    ```
+ - `strip():` removes leading and trailing whitespace from a string.
+     
+      ```java  
+          String trimmedStr = "   Hello, world!   ".strip();
+          System.out.println(trimmedStr); // Output : "Hello, world!" 
+      ```
+ - `repeat():` repeats a string a certain number of times.
+     
+      ```java  
+         String repeatedStr = "Java ".repeat(3);
+         System.out.println(repeatedStr); // Output: "Java Java Java "
+      ```
+ ## 2. New String Methods 
+
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
    - `Encapsulation` is the mechanism of bundling the data `(attributes)` and the methods `(functions)` that operate on the data into a single unit called a class.
