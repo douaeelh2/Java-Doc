@@ -449,48 +449,51 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
         empStreamBuilder.accept(arrayOfEmps[2]);
         Stream<Employee> empStream = empStreamBuilder.build();
     ```
-    
+
     ### Java Stream Operations
     **Intermediate Operations:** <br>
-    - `filter`<br>
-      Returns a stream consisting of elements that match the given predicate:
+    - `filter():` Returns a Stream containing only the elements that satisfy a specific condition.
       
       ```java
-      List<String> fruits = Arrays.asList("apple", "banana", "orange");
-      Stream<String> result = fruits.stream().filter(s -> s.startsWith("a"));
-      System.out.println(result);//apple
+          List<String> fruits = Arrays.asList("apple", "banana", "orange");
+          Stream<String> result = fruits.stream().filter(s -> s.startsWith("a"));
+          System.out.println(result); // Output : apple
       ```
-    - `map`<br>
-      Returns a stream consisting of the results of applying the given function to the elements of the stream:
+      
+    - `map():` Transforms each element of the Stream into another element by applying a specified function.
       
       ```java
-      List<String> fruits = Arrays.asList("apple", "banana", "orange");
-      Stream<Integer> result = fruits.stream().map(String::length);
-      System.out.println(result);//prints the length of each element of the fruits list
+          List<String> fruits = Arrays.asList("apple", "banana", "orange");
+          Stream<Integer> result = fruits.stream().map(String::length);
+          System.out.println(result); // prints the length of each element of the fruits list
       ```
       
-    - `distinct`<br>
-      Returns a stream consisting of the distinct elements of the stream:
+    - `distinct():` Returns a Stream with distinct elements (removes duplicates).
       
       ```java
-      List<String> numbers = Arrays.asList("1", "2", "2", "3", "4", "4");
-      Stream<String> result = numbers.stream().distinct();
-      result.forEach(System.out::println);//1 2 3 4
+          List<String> numbers = Arrays.asList("1", "2", "2", "3", "4", "4");
+          Stream<String> result = numbers.stream().distinct();
+          result.forEach(System.out::println);  // Output : 1 2 3 4
       ```
-      
+    - `reduce():` Reduces the elements of the Stream using a specific associative operation (e.g., sum, product, concatenation, etc.).
+    - 
+      ```java
+          List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+          Optional<Integer> sum = numbers.stream()
+                                         .reduce((a, b) -> a + b);
+          sum.ifPresent(System.out::println); // Output: 15 (1 + 2 + 3 + 4 + 5)  
+      ```
 
-    - `sorted`<br>
-      Returns a stream consisting of the elements of the stream sorted:
+    - `sorted():` Sorts the elements of the Stream.
       
       ```java
-        List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 2);
-        Stream<Integer> result = numbers.stream().sorted();
-        result.forEach(System.out::println);//1 1 2 3 4
+          List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 2);
+          Stream<Integer> result = numbers.stream().sorted();
+          result.forEach(System.out::println); // Output : 1 1 2 3 4
       
       ```
       
-    - `flatMap`<br>
-      Returns a stream consisting of the results of applying the given function to the elements of the stream:
+    - `flatMap():` Transforms each element of the Stream into a Stream of other elements, then flattens the resulting streams into a single Stream.
       
       ```java
           List<List<Integer>> listOfLists = Arrays.asList(
@@ -501,21 +504,39 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
           List<Integer> flattenedList = listOfLists.stream()
                                                     .flatMap(List::stream)
                                                     .collect(Collectors.toList());
-          System.out.println(flattenedList);//[1, 2, 3, 4, 5, 6, 7, 8, 9]
+          System.out.println(flattenedList);  // Output : [1, 2, 3, 4, 5, 6, 7, 8, 9]
       ```
+      
+       - `skip():` Skips the specified number of elements from the beginning of the Stream.
+       
+       ```java
+          List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+          List<Integer> skippedNumbers = numbers.stream()
+                                                .skip(5)
+                                                .collect(Collectors.toList());
+          System.out.println(skippedNumbers); // Output: [6, 7, 8, 9, 10]
+       ```
+       
+    - `limit():` Limits the size of the Stream to the specified number of elements.
+
+      ```java
+          List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+          List<Integer> skippedNumbers = numbers.stream()
+                                                .skip(5)
+                                                .collect(Collectors.toList());
+          System.out.println(skippedNumbers); // Output: [6, 7, 8, 9, 10]
+       ```
 
     **Terminal Operations:** <br>
-    - `forEach`<br>
-      Performs an action for each element of the stream:
+    - `forEach():` Performs an action for each element of the stream.
       
       ```java
           List<String> fruits = Arrays.asList("apple", "banana", "orange");
           fruits.stream().forEach(System.out::println);//prints each element of the list
       ```
 
-    - `collect`<br>
-      
-      
+    - `collect():` Collects the elements of the Stream into a specific data structure (e.g., a list, set, map, etc.).
+           
       ```java
           List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
           List<String> modifiedNames = names.stream()
