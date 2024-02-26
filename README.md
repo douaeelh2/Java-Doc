@@ -258,189 +258,198 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
         }
     }
    ```
-## 4. Collections Interfaces
+  ## 4. Collections Interfaces
+    
+    Collection Interfaces refers to the interfaces provided in the Java Collections Framework (JCF) that define various types of collections. These interfaces are part of the java.util   package and provide a standardized way of working with collections of objects.
+    
+    ![Java-Collections-Framework-Hierarchy](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2837ac14-8fc7-41a8-b72c-680fe454136d)
   
-  Collection Interfaces refers to the interfaces provided in the Java Collections Framework (JCF) that define various types of collections. These interfaces are part of the java.util   package and provide a standardized way of working with collections of objects.
-  
-  ![Java-Collections-Framework-Hierarchy](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2837ac14-8fc7-41a8-b72c-680fe454136d)
-
- ### Collection:
-  - This is the root interface in the collection hierarchy. It defines basic operations applicable to all collections such as adding, removing, and querying elements. Use this when you need a general-purpose collection to store a group of objects without caring about the specific order or uniqueness of elements.
-      
-     ```java
-        import java.util.ArrayList;
-        import java.util.Collection;
+   ### Collection:
+    - This is the root interface in the collection hierarchy. It defines basic operations applicable to all collections such as adding, removing, and querying elements. Use this when you need a general-purpose collection to store a group of objects without caring about the specific order or uniqueness of elements.
         
-        public class Main {
-            public static void main(String[] args) {
-                Collection<String> names = new ArrayList<>();
-        
-                names.add("Alice");
-                names.add("Bob");
-                names.add("Charlie");
-        
-                System.out.println("Collection : " + names); //Output : Collection : [Alice, Bob, Charlie]
-            }
-        }
-
-     ```
-     
- ### List:
-   - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include `ArrayList`, `LinkedList` , etc.
-  
-     ```java
-        import java.util.ArrayList;
-        import java.util.List;
-        
-        public class ListExample {
-            public static void main(String[] args) {
-                List<Integer> numbers = new ArrayList<>();
-                
-                numbers.add(10);
-                numbers.add(20);
-                numbers.add(30);
-                
-                System.out.println("List: " + numbers); //Output : List: [10, 20, 30]
-                
-                // Accessing an element by its index
-                int secondElement = numbers.get(1);
-                System.out.println("Second element: " + secondElement);  //Output : Second element: 20
-            }
-        }
-
-     ```
-
- ### Map:
-  - A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include:
-    - `HashMap:` This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
-      
-      ```java
-        import java.util.HashMap;
-        import java.util.Map;
-      
+       ```java
+          import java.util.ArrayList;
+          import java.util.Collection;
+          
           public class Main {
               public static void main(String[] args) {
-                  Map<String, Integer> hashMap = new HashMap<>();
+                  Collection<String> names = new ArrayList<>();
           
-                  hashMap.put("John", 25);
-                  hashMap.put("Alice", 30);
-                  hashMap.put("Bob", 20);
+                  names.add("Alice");
+                  names.add("Bob");
+                  names.add("Charlie");
           
-                  for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+                  System.out.println("Collection : " + names); //Output : Collection : [Alice, Bob, Charlie]
+              }
+          }
+  
+       ```
+       
+   ### List:
+     - An ordered collection (sometimes called a sequence). Lists allow duplicate elements and provide methods for accessing elements by their index. Common implementations of the List interface include `ArrayList`, `LinkedList` , etc.
+    
+       ```java
+          import java.util.ArrayList;
+          import java.util.List;
+          
+          public class ListExample {
+              public static void main(String[] args) {
+                  List<Integer> numbers = new ArrayList<>();
+                  
+                  numbers.add(10);
+                  numbers.add(20);
+                  numbers.add(30);
+                  
+                  System.out.println("List: " + numbers); //Output : List: [10, 20, 30]
+                  
+                  // Accessing an element by its index
+                  int secondElement = numbers.get(1);
+                  System.out.println("Second element: " + secondElement);  //Output : Second element: 20
+              }
+          }
+  
+       ```
+  
+   ### Map:
+    - A map is a collection that associates unique keys with corresponding values. Each key is unique and corresponds to a single value. Common implementations of the Map interface include:
+      - `HashMap:` This class uses a hash table to store key-value pairs, providing fast lookup and access. However, the order of elements is not guaranteed.
+        
+        ```java
+          import java.util.HashMap;
+          import java.util.Map;
+        
+            public class Main {
+                public static void main(String[] args) {
+                    Map<String, Integer> hashMap = new HashMap<>();
+            
+                    hashMap.put("John", 25);
+                    hashMap.put("Alice", 30);
+                    hashMap.put("Bob", 20);
+            
+                    for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+                        System.out.print(entry.getKey() + " - " + entry.getValue());
+                        System.out.print("  ");  //Output : Bob - 20  Alice - 30  John - 25
+                    }
+                }
+            }
+        ```
+      - `TreeMap:` This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
+        
+        ```java
+           import java.util.TreeMap;
+           import java.util.Map;
+        
+           public class Main {
+              public static void main(String[] args) {
+                  Map<String, Integer> treeMap = new TreeMap<>();
+          
+                  treeMap.put("John", 25);
+                  treeMap.put("Alice", 30);
+                  treeMap.put("Bob", 20);
+          
+                  for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
                       System.out.print(entry.getKey() + " - " + entry.getValue());
-                      System.out.print("  ");  //Output : Bob - 20  Alice - 30  John - 25
+                    System.out.print("  "); //Output : Alice - 30  Bob - 20  John - 25
                   }
               }
           }
-      ```
-    - `TreeMap:` This class implements the SortedMap interface and uses a red-black tree to store key-value pairs. Elements are sorted according to the natural order of keys or using a comparator provided when creating the TreeMap object.
+        ```
+      - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
+  
+    ### Set:
+    - A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
       
-      ```java
-         import java.util.TreeMap;
-         import java.util.Map;
-      
-         public class Main {
-            public static void main(String[] args) {
-                Map<String, Integer> treeMap = new TreeMap<>();
-        
-                treeMap.put("John", 25);
-                treeMap.put("Alice", 30);
-                treeMap.put("Bob", 20);
-        
-                for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
-                    System.out.print(entry.getKey() + " - " + entry.getValue());
-                  System.out.print("  "); //Output : Alice - 30  Bob - 20  John - 25
-                }
-            }
-        }
-      ```
-    - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
+      `HashSet:`
+      - It is implemented using a hash table. It does not maintain any order of elements; instead, it uses the hash code of the objects to store elements.
+      -  If you try to add duplicates, they will be ignored.
+      -  Allows a single null element.
+       
+           ```java
+              import java.util.HashSet;
+              import java.util.Set;
+           
+              public class Main {
+                  public static void main(String[] args) {
+                      Set<String> hashSet = new HashSet<>();
+                      hashSet.add("banana");
+                      hashSet.add("apple");
+                      hashSet.add("orange");
+                      hashSet.add("banana");
+              
+                      System.out.print("Elements in HashSet:");
+                      for (String fruit : hashSet) {
+                          System.out.print(fruit); //Output : Elements in HashSet: banana  orange  apple
+                      }
+                  }
+              }
+           ```
+           
+      `TreeSet:`
+      - It is implemented using a red-black tree. It stores elements in sorted order (either natural ordering or specified by a comparator).
+      -  Also does not allow duplicate elements.
+      -  Does not allow null elements. If you try to add a null element, it will throw a NullPointerException.
+       
+           ```java
+              import java.util.TreeSet;
+              import java.util.Set;
+           
+              public class Main {
+                  public static void main(String[] args) {
+                      Set<String> treeSet = new TreeSet<>();
+                      treeSet.add("banana");
+                      treeSet.add("apple");
+                      treeSet.add("orange");
+                      treeSet.add("banana");
+              
+                      System.out.print("Elements in TreeSet:");
+                      for (String fruit : treeSet) {
+                          System.out.print(fruit);  //Output : Elements in TreeSet: apple  banana  orange
+                      }
+                  }
+              }
+           ```
+           
+      - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
 
-  ### Set:
-  - A set is a collection that does not allow duplicate elements. This means that each element in a set is unique. Common implementations of the Set interface include HashSet, TreeSet, LinkedHashSet, etc.
+    ## 5. Stream API
+    Stream API is a way to express and process collections of objects. Enable us to perform operations like filtering, mapping,reducing and sorting. The Stream API in the `java.util.stream` package in Java offers an simple approach to describe operations to be executed on a dataset.
+  
+   ![Stream-in-Java-768](https://github.com/douaeelh2/Java-Documentation/assets/127549220/dff08118-d389-4aeb-adfc-fe114b78bdc0)
     
-    `HashSet:`
-    - It is implemented using a hash table. It does not maintain any order of elements; instead, it uses the hash code of the objects to store elements.
-    -  If you try to add duplicates, they will be ignored.
-    -  Allows a single null element.
-     
-         ```java
-            import java.util.HashSet;
-            import java.util.Set;
-         
-            public class Main {
-                public static void main(String[] args) {
-                    Set<String> hashSet = new HashSet<>();
-                    hashSet.add("banana");
-                    hashSet.add("apple");
-                    hashSet.add("orange");
-                    hashSet.add("banana");
-            
-                    System.out.print("Elements in HashSet:");
-                    for (String fruit : hashSet) {
-                        System.out.print(fruit); //Output : Elements in HashSet: banana  orange  apple
-                    }
-                }
-            }
-         ```
-         
-    `TreeSet:`
-    - It is implemented using a red-black tree. It stores elements in sorted order (either natural ordering or specified by a comparator).
-    -  Also does not allow duplicate elements.
-    -  Does not allow null elements. If you try to add a null element, it will throw a NullPointerException.
-     
-         ```java
-            import java.util.TreeSet;
-            import java.util.Set;
-         
-            public class Main {
-                public static void main(String[] args) {
-                    Set<String> treeSet = new TreeSet<>();
-                    treeSet.add("banana");
-                    treeSet.add("apple");
-                    treeSet.add("orange");
-                    treeSet.add("banana");
-            
-                    System.out.print("Elements in TreeSet:");
-                    for (String fruit : treeSet) {
-                        System.out.print(fruit);  //Output : Elements in TreeSet: apple  banana  orange
-                    }
-                }
-            }
-         ```
-         
-    - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
-
-      ## 5. Stream API
-    The Stream API in the `java.util.stream` package in Java offers an simple approach to describe operations to be executed on a dataset.
-      ### Java Stream Creation
-    -obtain a stream from an existing array:
+     ### Java Stream Creation
+    - Obtain a stream from an existing array:
+      
     ```java
-    private static Employee[] arrayOfEmps = {
-      new Employee(1, "Jeff Bezos", 100000.0), 
-      new Employee(2, "Bill Gates", 200000.0), 
-      new Employee(3, "Mark Zuckerberg", 300000.0)
-    };
-    Stream.of(arrayOfEmps);
+       private static Employee[] arrayOfEmps = {
+          new Employee(1, "Jeff Bezos", 100000.0), 
+          new Employee(2, "Bill Gates", 200000.0), 
+          new Employee(3, "Mark Zuckerberg", 300000.0)
+        };
+        Stream.of(arrayOfEmps);
     ```
-    -obtain a stream from an existing list:
+    - Obtain a stream from an existing list:
+      
     ```java
-    private static List<Employee> empList = Arrays.asList(arrayOfEmps);
-    empList.stream();
-    ```
-    -create a stream from individual objects:
-    ```java
-    Stream.of(arrayOfEmps[0], arrayOfEmps[1], arrayOfEmps[2]);
+       private static List<Employee> empList = Arrays.asList(arrayOfEmps);
+      empList.stream();
     ```
     
-    -create a stream using Stream.builder():
+    - Create a stream from individual objects:
+      
     ```java
-    Stream.Builder<Employee> empStreamBuilder = Stream.builder();
-    empStreamBuilder.accept(arrayOfEmps[0]);
-    empStreamBuilder.accept(arrayOfEmps[1]);
-    empStreamBuilder.accept(arrayOfEmps[2]);
-    Stream<Employee> empStream = empStreamBuilder.build();
+       Stream.of(arrayOfEmps[0], arrayOfEmps[1], arrayOfEmps[2]);
     ```
+    
+    - Create a stream using Stream.builder():
+      
+    ```java
+        Stream.Builder<Employee> empStreamBuilder = Stream.builder();
+        empStreamBuilder.accept(arrayOfEmps[0]);
+        empStreamBuilder.accept(arrayOfEmps[1]);
+        empStreamBuilder.accept(arrayOfEmps[2]);
+        Stream<Employee> empStream = empStreamBuilder.build();
+    ```
+    
     ### Java Stream Operations
     **Intermediate Operations:** <br>
     - `filter`<br>
@@ -474,9 +483,9 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
       Returns a stream consisting of the elements of the stream sorted:
       
       ```java
-      List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 2);
-      Stream<Integer> result = numbers.stream().sorted();
-      result.forEach(System.out::println);//1 1 2 3 4
+        List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 2);
+        Stream<Integer> result = numbers.stream().sorted();
+        result.forEach(System.out::println);//1 1 2 3 4
       
       ```
       
@@ -484,15 +493,15 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
       Returns a stream consisting of the results of applying the given function to the elements of the stream:
       
       ```java
-      List<List<Integer>> listOfLists = Arrays.asList(
-            Arrays.asList(1, 2, 3),
-            Arrays.asList(4, 5, 6),
-            Arrays.asList(7, 8, 9)
-        );
-      List<Integer> flattenedList = listOfLists.stream()
-                                                .flatMap(List::stream)
-                                                .collect(Collectors.toList());
-      System.out.println(flattenedList);//[1, 2, 3, 4, 5, 6, 7, 8, 9]
+          List<List<Integer>> listOfLists = Arrays.asList(
+                Arrays.asList(1, 2, 3),
+                Arrays.asList(4, 5, 6),
+                Arrays.asList(7, 8, 9)
+            );
+          List<Integer> flattenedList = listOfLists.stream()
+                                                    .flatMap(List::stream)
+                                                    .collect(Collectors.toList());
+          System.out.println(flattenedList);//[1, 2, 3, 4, 5, 6, 7, 8, 9]
       ```
 
     **Terminal Operations:** <br>
@@ -500,19 +509,19 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
       Performs an action for each element of the stream:
       
       ```java
-      List<String> fruits = Arrays.asList("apple", "banana", "orange");
-      fruits.stream().forEach(System.out::println);//prints each element of the list
+          List<String> fruits = Arrays.asList("apple", "banana", "orange");
+          fruits.stream().forEach(System.out::println);//prints each element of the list
       ```
 
     - `collect`<br>
       
       
       ```java
-      List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
-      List<String> modifiedNames = names.stream()
-                .filter(name -> name.length() > 4)
-                .map(String::toUpperCase)
-                .collect(Collectors.toList());//collect the result into a list
+          List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
+          List<String> modifiedNames = names.stream()
+                    .filter(name -> name.length() > 4)
+                    .map(String::toUpperCase)
+                    .collect(Collectors.toList());//collect the result into a list
       ```
       
 # Java OOP (Object-Oriented Programming)
