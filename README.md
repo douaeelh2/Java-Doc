@@ -579,7 +579,37 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
          String repeatedStr = "Java ".repeat(3);
          System.out.println(repeatedStr); // Output: "Java Java Java "
       ```
- ## 2. New String Methods 
+      
+ ## 2. HttpClient API : 
+ - `HttpClient:` This API provides a modern alternative to the older HttpURLConnection class and offers richer features for making synchronous or asynchronous HTTP requests, handling cookies, headers, etc. It is built on the concept of reactive streams, making it more flexible and performant in scenarios where many requests need to be handled efficiently.
+   
+     ```java
+        import java.io.IOException;
+        import java.net.URI;
+        import java.net.http.HttpClient;
+        import java.net.http.HttpRequest;
+        import java.net.http.HttpResponse;
+        
+        public class Main {
+            public static void main(String[] args) throws IOException, InterruptedException {
+
+                // Create an HttpClient
+                HttpClient client = HttpClient.newHttpClient();
+     
+                // Specify the URL for the GET request
+                String url = "https://jsonplaceholder.typicode.com/posts/1";
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(url))
+                        .GET()
+                        .build();
+     
+                // Send the GET request and retrieve the response
+                HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+                System.out.println("Status code: " + response.statusCode());
+                System.out.println("Response body: " + response.body());
+            }
+        }
+     ```   
 
 # Java OOP (Object-Oriented Programming)
  ## 1. Encapsulation 
