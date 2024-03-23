@@ -1,7 +1,7 @@
 # Java Fundamentals Documentation
 
 # Introduction
-This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 concepts necessary for working with Spring Boot.
+This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 concepts necessary for working with Spring.
 
 # Table of Contents
 - [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
