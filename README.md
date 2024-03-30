@@ -1,6 +1,5 @@
 # Java Fundamentals Documentation
 
-# Introduction
 This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 Concepts necessary for working with Spring Framework.
 
 # Table of Contents
