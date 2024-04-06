@@ -27,7 +27,10 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Interface & Abstract Class](#interface-&-abstract-class)
   - [Static](#static)
   - [Final](#final)
-
+ 
+ # References
+- [Java Guides](https://www.javaguides.net/)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
 # What is JDK, JRE and JVM in Java
  ## 1. JDK (Java Development Kit)
