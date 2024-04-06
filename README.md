@@ -27,11 +27,9 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Interface & Abstract Class](#interface-&-abstract-class)
   - [Static](#static)
   - [Final](#final)
- 
- # References
-- [Java Guides](https://www.javaguides.net/)
-- [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
+
+ 
 # What is JDK, JRE and JVM in Java
  ## 1. JDK (Java Development Kit)
    - The `JDK (Java Development Kit)` is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
@@ -1001,4 +999,9 @@ public class MyClass {
         }
    ```
 
+   
+
+# References
+- [Java Guides](https://www.javaguides.net/)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
