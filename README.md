@@ -1,7 +1,6 @@
 # Java Fundamentals Documentation
 
-![java-image](https://github.com/douaeelh2/Java-Documentation/assets/127549220/cec272f8-1c6e-4fcd-b4a8-cbc20b73724d)
-
+![java-image](https://github.com/douaeelh2/Java-Documentation/assets/127549220/6626e3aa-706d-401d-b3b6-1dd2ba64409e)
 
 This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 Concepts necessary for working with Spring Framework.
 
