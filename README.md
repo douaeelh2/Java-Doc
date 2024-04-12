@@ -1,7 +1,7 @@
 # Java Fundamentals Documentation
 
 <div>
-  <img src="https://github.com/douaeelh2/Java-Documentation/assets/127549220/cec272f8-1c6e-4fcd-b4a8-cbc20b73724d" alt="Java Image"  style="width: 50%">
+  <img src="https://github.com/douaeelh2/Java-Documentation/assets/127549220/cec272f8-1c6e-4fcd-b4a8-cbc20b73724d" alt="Java Image"  style="width: 80%">
 </div>
 
 This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 Concepts necessary for working with Spring Framework.
