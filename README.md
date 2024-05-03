@@ -716,39 +716,73 @@ class Circle extends Shape {
 }
 ```
 ## 4. Polymorphism
-  - `Polymorphism` is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two types of polymorphism in Java: compile-time `(method overloading)` and runtime `(method overriding)`.
-    
-## 5. Overloading and Overriding
-  - `Overloading` occurs when a class has multiple methods with the same name but different signature. 
+  - `Polymorphism` is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two main types of polymorphism in Java: `compile-time polymorphism` (also known as `method overloading`) and `runtime polymorphism` (also known as `method overriding`).
+
+ - `Method overloading polymorphism (or interface polymorphism):` This occurs when there are multiple methods with the same name within the same class, but with different parameter lists (signature).
+ - The Java compiler determines which method to call based on the number and types of arguments passed to the method.
+ - Method overloading is an example of compile-time polymorphism.
     
   ```java
-    class MathOperations {
-    // Method overloading
-    int add(int a, int b) {
-        return a + b;
-    }
+     class Calculator {
+      public int add(int a, int b) {
+          return a + b;
+      }
+      
+      public double add(double a, double b) {
+          return a + b;
+          }
+      }
+ ```
 
-    double add(double a, double b) {
-        return a + b;
-     }
+ ```java
+    public class Main {
+        public static void main(String[] args) {
+            Calculator calculator = new Calculator();
+            System.out.println(calculator.add(1, 2)); // Calls the add(int, int) method
+            System.out.println(calculator.add(1.5, 2.5)); // Calls the add(double, double) method
+        }
     }
  ```
-  - `Overriding` happens when a subclass provides a specific implementation of a method that is already defined in its superclass with the same signature.
+
+
+  - `Subtype polymorphism (or inheritance polymorphism):` This occurs when a method in a subclass has the same signature (name and parameter list) as a method in its superclass.
+ - When the method is called on an object of the subclass, the Java Virtual Machine (JVM) determines at runtime which version of the method to execute based on the actual type of the object.
+ - Method overriding is an example of runtime polymorphism.
     
   ```java
+
     class Animal {
-        void makeSound() {
-            System.out.println("Animal makes a sound");
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
         }
     }
     
     class Dog extends Animal {
-        void makeSound() {
+        @Override
+        public void makeSound() {
             System.out.println("Dog barks");
         }
     }
+    
+    public class Main {
+        public static void main(String[] args) {
+            Animal animal = new Dog(); // Polymorphism
+            animal.makeSound(); // Calls makeSound from Dog class
+        }
+    }
+
   ```
- ## 6. Aggregation and Composition
+
+  ```java
+      public class Main {
+          public static void main(String[] args) {
+              Animal animal = new Dog(); // Polymorphism
+              animal.makeSound(); // Calls makeSound from Dog class
+          }
+      }
+
+  ```
+ ## 5. Aggregation and Composition
   - `Aggregation` represents a "has-a" relationship.
   - It occurs when an object contains another object, but the contained object can exist independently of the container object.
 
@@ -802,7 +836,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
      ```
  In this example, a `Car` is composed of an `Engine`. The Engine object is created along with the `Car` object and cannot exist independently. If the `Car` object is destroyed, the `Engine` object is also destroyed.
 
- ## 7. Interface & Class
+ ## 6. Interface & Class
  
   - `Interface` is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.
   - All methods declared in an interface are implicitly `public` and `abstract`. They cannot contain methods with implementation.
@@ -865,7 +899,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
     }
 ```
 
-## 8. Static
+## 7. Static
    - `Static Variable:` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class. There will be only one copy of a static variable regardless of how many instances of the class are created. 
 
   ```java
@@ -940,7 +974,7 @@ public class MyClass {
      }
   ```
 
-## 9. Final
+## 8. Final
 - `Final Attribute (Variable):` A final attribute cannot be reassigned once initialized.
   
   ```java
