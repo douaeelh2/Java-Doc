@@ -718,7 +718,7 @@ class Circle extends Shape {
 ## 4. Polymorphism
   - `Polymorphism` is the ability of an object to take on different forms or behaviors depending on the context in which it is used. There are two main types of polymorphism in Java: `compile-time polymorphism` (also known as `method overloading`) and `runtime polymorphism` (also known as `method overriding`).
 
- ### - Method overloading polymorphism (or interface polymorphism):
+ ### 1. Method overloading polymorphism (or interface polymorphism):
 
  - This occurs when there are multiple methods with the same name within the same class, but with different parameter lists (signature).
  - The Java compiler determines which method to call based on the number and types of arguments passed to the method.
@@ -747,7 +747,7 @@ class Circle extends Shape {
  ```
 
 
-  ### - Subtype polymorphism (or inheritance polymorphism):
+  ### 2. Subtype polymorphism (or inheritance polymorphism):
  - This occurs when a method in a subclass has the same signature (name and parameter list) as a method in its superclass.
  - When the method is called on an object of the subclass, the Java Virtual Machine (JVM) determines at runtime which version of the method to execute based on the actual type of the object.
  - Method overriding is an example of runtime polymorphism.
