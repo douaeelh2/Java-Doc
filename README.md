@@ -766,14 +766,7 @@ class Circle extends Shape {
             System.out.println("Dog barks");
         }
     }
-    
-    public class Main {
-        public static void main(String[] args) {
-            Animal animal = new Dog(); // Polymorphism
-            animal.makeSound(); // Calls makeSound from Dog class
-        }
-    }
-
+  
   ```
 
   ```java
