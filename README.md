@@ -962,9 +962,10 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
   
           // Both objects share the same static variable
           obj1.myStaticVariable = 20;
-  
-          System.out.println("obj1 static variable: " + obj1.myStaticVariable);
-          System.out.println("obj2 static variable: " + obj2.myStaticVariable);
+
+          System.out.println("static variable: " + MyClass.myStaticVariable);  // 20
+          System.out.println("obj1 static variable: " + obj1.myStaticVariable); // 20
+          System.out.println("obj2 static variable: " + obj2.myStaticVariable);  // 20
       }
   }
 ```
