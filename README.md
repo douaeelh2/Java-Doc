@@ -923,7 +923,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
     }
 ```
 
-### Difference between Abstract Class and Interface
+## Difference between Abstract Class and Interface
 
  ### Method Implementation:
  - Abstract Class: Can have both `abstract` and `concrete` methods.
