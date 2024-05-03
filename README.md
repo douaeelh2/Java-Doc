@@ -26,7 +26,6 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Inheritance](#inheritance)
   - [Abstraction](#abstraction)
   - [Polymorphism](#polymorphism)
-  - [Overloading & Overriding](#overloading-&-overriding)
   - [Aggregation & Composition](#aggregation-&-composition)
   - [Interface & Abstract Class](#interface-&-abstract-class)
   - [Static](#static)
