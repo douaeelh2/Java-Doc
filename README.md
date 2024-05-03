@@ -750,6 +750,7 @@ class Circle extends Shape {
   ### 2. Subtype polymorphism (or inheritance polymorphism):
  - This occurs when a method in a subclass has the same signature (name and parameter list) as a method in its superclass.
  - When the method is called on an object of the subclass, the Java Virtual Machine (JVM) determines at runtime which version of the method to execute based on the actual type of the object.
+ - It is based on the actual type of object being referred to by the reference variable, not on the type of the reference variable itself.
  - Method overriding is an example of runtime polymorphism.
     
   ```java
