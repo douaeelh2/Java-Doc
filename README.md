@@ -927,7 +927,7 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
 
  ### Method Implementation:
  - Abstract Class: Can have both `abstract` and `concrete` methods.
- -Interface: Can only have `method signatures`, but from Java 8 onwards, can have `default` and `static` methods.
+ - Interface: Can only have `method signatures`, but from Java 8 onwards, can have `default` and `static` methods.
   
 ### Inheritance:
 - Abstract Class: Supports both single inheritance and implementation inheritance. A Java class can extend only `one abstract class` due to `Java's single inheritance` model. It's possible to inherit fields and methods from an abstract class, and subclassing allows for code reuse and extension of functionality.
