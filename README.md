@@ -842,10 +842,31 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
   - Extend one or more interfaces
 
   ```java
-       // Abstract class
-      abstract class Vehicle {
-          void drive(); // Implicitly abstract and public   
-          void stop();  // Implicitly abstract and public
+       // Define an interface
+      interface Animal {
+          void eat(); // method signature
+          void sleep();
+      }
+      
+      // Implement the interface in a class
+      class Dog implements Animal {
+          @Override
+          public void eat() {
+              System.out.println("Dog eats");
+          }
+      
+          @Override
+          public void sleep() {
+              System.out.println("Dog sleeps");
+          }
+      }
+      
+      public class Main {
+          public static void main(String[] args) {
+              Animal dog = new Dog();
+              dog.eat();
+              dog.sleep();
+          }
       }
   
   ```
