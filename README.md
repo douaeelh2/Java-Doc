@@ -848,6 +848,10 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
           void sleep();
       }
       
+  ```
+
+  ```java
+      
       // Implement the interface in a class
       class Dog implements Animal {
           @Override
@@ -860,7 +864,10 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
               System.out.println("Dog sleeps");
           }
       }
-      
+  
+  ```
+
+  ```java
       public class Main {
           public static void main(String[] args) {
               Animal dog = new Dog();
@@ -915,6 +922,32 @@ In this example, a `Department` has multiple `Professor` objects. However, the `
         }
     }
 ```
+
+### Difference between Abstract Class and Interface
+
+ ### Method Implementation:
+ - Abstract Class: Can have both `abstract` and `concrete` methods.
+ -Interface: Can only have `method signatures`, but from Java 8 onwards, can have `default` and `static` methods.
+  
+### Inheritance:
+- Abstract Class: Supports both single inheritance and implementation inheritance. A Java class can extend only `one abstract class` due to `Java's single inheritance` model. It's possible to inherit fields and methods from an abstract class, and subclassing allows for code reuse and extension of functionality.
+- Interface: Supports `multiple inheritance` through implementation. A Java class can `implement` multiple interfaces. Interfaces enable a form of multiple inheritance by allowing a class to declare that it implements multiple behaviors.
+  
+### Access Modifiers:
+- Abstract Class: Can have constructors with various access modifiers `(public, protected, or package-private)`. Abstract classes can also have fields with any access modifier.
+- Interface: All methods declared in an interface are by default `public` and `abstract`. Fields in interfaces are implicitly `public`, `static`, and `final`.
+  
+### Constructor:
+- Abstract Class:  Can have constructors, which are called when a concrete subclass is instantiated. 
+- Interface: Cannot have constructors because interfaces cannot be instantiated. They are meant to be implemented by classes, which provide the necessary constructors.
+
+### Extension:
+- Abstract Class: Extended using the `extends` keyword.
+- Interface: Implemented using the `implements` keyword.
+  
+### Usage:
+- Abstract Class: Used when you want to provide a common `base implementation` for a group of related classes. It's appropriate when you have a base class that contains some default behavior that subclasses can inherit and override.
+- Interface: Used when you want to define a `contract` for a group of classes, specifying a `set of methods` that implementing classes must provide. Interfaces are useful for achieving `loose coupling` and allowing different classes to adhere to a common interface without being tightly coupled to each other.
 
 ## 7. Static
    - `Static Variable:` When a variable is declared as static within a class, it means that the variable belongs to the class itself rather than to any instance of the class. There will be only one copy of a static variable regardless of how many instances of the class are created. 
