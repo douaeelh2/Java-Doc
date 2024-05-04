@@ -415,7 +415,7 @@ JRE doesn’t contain any development tools such as Java compiler, debugger, JSh
               }
            ```
            
-      - `LinkedHashMap:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
+      - `LinkedHashSet:` This class maintains the insertion order of elements in addition to providing fast access to elements through a hash table. This means that elements are traversed in insertion order when iterating over the map.
 
     ## 5. Stream API
     Stream API is a way to express and process collections of objects. Enable us to perform operations like filtering, mapping,reducing and sorting. The Stream API in the `java.util.stream` package in Java offers an simple approach to describe operations to be executed on a dataset.
