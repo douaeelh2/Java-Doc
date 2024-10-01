@@ -7,8 +7,24 @@
 This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 and 21 Concepts necessary for working with Spring Framework.
 
 # Table of Contents
+
+- [Java Basics](#java-basics)
+  - [Variables and Data Types](#variables-and-data-types)
+  - [Operators](#operators)
+  - [Control Flow Statements](#control-flow-statements)
+    - [If-Else](#if-else)
+    - [Switch](#switch)
+  - [Loops](#loops)
+    - [For Loop](#for-loop)
+    - [While Loop](#while-loop)
+    - [Do-While Loop](#do-while-loop)
+  - [Arrays](#arrays)
+  - [String Manipulation](#string-manipulation)
+  - [Exception Handling](#exception-handling)
+
 - [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
 - [How to Execute a Java Program](#how-to-execute-a-java-program)
+  
 - [Java 8 Basics](#java-8-basics)
   - [Lambda Expressions](#java-lambda-expressions)
   - [Functional Interfaces](#java-functional-interfaces)
@@ -17,10 +33,11 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Stream API](#java-stream-api)
   - [Optional Class](#java-optional-class)
   - [StringJoiner Class](#java-stringjoiner-class)
+
 - [Java 11 Basics](#java-11-basics)
   - [New String Methods](#java-new-string-methods)
   - [HttpClient API](#java-httpclient-api)
-    
+
 - [Java OOP (Object-Oriented Programming)](#java-oop-object-oriented-programming)
   - [Encapsulation](#encapsulation)
   - [Inheritance](#inheritance)
@@ -31,8 +48,146 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Static](#static)
   - [Final](#final)
 
+# Java Basics
+## Variables and Data Types
 
- 
+In Java, **variables** are containers that store data values. Each variable must be declared with a **data type**, which defines the type of value the variable can store.
+
+### 1. **Variables**
+
+A variable in Java has three key components:
+
+- **Data Type**: Specifies the type of data the variable will hold (e.g., `int`, `String`).
+- **Variable Name**: The name of the variable (follows naming conventions).
+- **Value**: The data or value assigned to the variable.
+
+##### Types of Variables
+
+1. **Local Variables**: Declared inside a method, constructor, or block and are only accessible within that scope.
+2. **Instance Variables**: Declared in a class, but outside a method, constructor, or block. They are non-static and each object has its own copy.
+3. **Static Variables**: Declared using the `static` keyword, and they are shared among all objects of the class.
+
+##### Example:
+
+```java
+    public class Example {
+        // Instance variable
+        int instanceVar = 10;
+    
+        // Static variable
+        static int staticVar = 20;
+    
+        public void method() {
+            // Local variable
+            int localVar = 30;
+            System.out.println(localVar);
+        }
+    }
+```
+
+ ### 2. Data Types
+Java has two main types of data types:
+
+- **Primitive Data Types:** Predefined by the language and store simple values.
+- **Reference Data Types:** Created using classes and store references (addresses) to objects.
+  
+#### 1. Primitive Data Types
+
+Java provides 8 primitive data types:
+
+
+| Data Type | Size     | Default Value | Description                          |
+|-----------|----------|---------------|--------------------------------------|
+| `byte`    | 1 byte   | 0             | Stores small integers (-128 to 127). |
+| `short`   | 2 bytes  | 0             | Stores small integers (-32,768 to 32,767). |
+| `int`     | 4 bytes  | 0             | Stores whole numbers (-2^31 to 2^31-1). |
+| `long`    | 8 bytes  | 0L            | Stores large integers (-2^63 to 2^63-1). |
+| `float`   | 4 bytes  | 0.0f          | Stores fractional numbers with up to 7 decimal digits. |
+| `double`  | 8 bytes  | 0.0d          | Stores fractional numbers with up to 16 decimal digits. |
+| `char`    | 2 bytes  | '\\u0000'     | Stores a single 16-bit Unicode character. |
+| `boolean` | 1 bit    | `false`       | Stores a `true` or `false` value.   |
+
+
+
+#### Example
+
+```java
+    public class DataTypesExample {
+        public static void main(String[] args) {
+            byte b = 100;
+            short s = 1000;
+            int i = 10000;
+            long l = 100000L;
+    
+            float f = 10.5f;
+            double d = 20.99;
+    
+            char c = 'A';
+            boolean bool = true;
+    
+            System.out.println("Byte: " + b);
+            System.out.println("Short: " + s);
+            System.out.println("Int: " + i);
+            System.out.println("Long: " + l);
+            System.out.println("Float: " + f);
+            System.out.println("Double: " + d);
+            System.out.println("Char: " + c);
+            System.out.println("Boolean: " + bool);
+        }
+    }
+```
+#### 2. Reference Data Types
+Reference data types include objects, arrays, and strings. These store memory addresses where data is located, rather than the actual value.
+
+- **Class Objects:** Instances of user-defined classes.
+- **Arrays:** Store multiple values of the same type.
+- **Strings:** Special class in Java used to store sequences of characters.
+
+Example:
+
+```java
+    public class ReferenceDataTypesExample {
+      public static void main(String[] args) {
+          // String (Reference Type)
+          String str = "Hello, Java!";
+          
+          // Array (Reference Type)
+          int[] numbers = {1, 2, 3, 4, 5};
+  
+          // Printing values
+          System.out.println("String: " + str);
+          System.out.println("First element in the array: " + numbers[0]);
+      }
+  }
+```
+
+3. Type Casting
+When assigning values of one type to another, Java provides type casting.
+
+- **Implicit Casting (Widening):** Automatically converts smaller data types to larger ones.
+Example: `int` to `long`
+- **Explicit Casting (Narrowing):** Manually converts larger data types to smaller ones.
+Example: `double` to `int`
+
+Example:
+
+```java
+    public class TypeCastingExample {
+        public static void main(String[] args) {
+            int intVal = 100;
+            long longVal = intVal; // Implicit Casting (int to long)
+    
+            double doubleVal = 10.99;
+            int intVal2 = (int) doubleVal; // Explicit Casting (double to int)
+    
+            System.out.println("Long value: " + longVal);
+            System.out.println("Int value after casting: " + intVal2);
+        }
+    }
+```
+
+
+
 # What is JDK, JRE and JVM in Java
  ## 1. JDK (Java Development Kit)
    - The `JDK (Java Development Kit)` is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
