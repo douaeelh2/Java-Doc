@@ -8,8 +8,12 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
 
 # Table of Contents
 
+- [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
+- [How to Execute a Java Program](#how-to-execute-a-java-program)
+
 - [Java Basics](#java-basics)
-  - [Variables and Data Types](#variables-and-data-types)
+  - [Variables](#variables)
+  - [Data Types](#data-types)
   - [Operators](#operators)
   - [Control Flow Statements](#control-flow-statements)
     - [If-Else](#if-else)
@@ -21,9 +25,6 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Arrays](#arrays)
   - [String Manipulation](#string-manipulation)
   - [Exception Handling](#exception-handling)
-
-- [What is JDK, JRE and JVM in Java](#what-is-jdk-jre-and-jvm-in-java)
-- [How to Execute a Java Program](#how-to-execute-a-java-program)
   
 - [Java 8 Basics](#java-8-basics)
   - [Lambda Expressions](#java-lambda-expressions)
@@ -48,12 +49,48 @@ This documentation aims to provide an overview of fundamental Java 8 , 11 , 17 a
   - [Static](#static)
   - [Final](#final)
 
+
+
+# What is JDK, JRE and JVM in Java
+ ## 1. JDK (Java Development Kit)
+   - The `JDK (Java Development Kit)` is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
+     
+     
+     ![Java JDK JRE and JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/ab43eb26-79a7-4936-8ace-10da5a248a51)
+
+ ## 2. JVM (Java Virtual Machine)
+   - The `JVM (Java Virtual Machine)` is a very important component of Java programming language. When you run the Java program, the Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly).
+   - `JVM` is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
+  
+     ![JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2b0cfefd-eae7-405d-8d67-be6492089df4)
+     
+
+ ## 3. JRE (Java Runtime Environment)
+   - The `Java Runtime Environment (JRE)` provides the libraries, the Java Virtual Machine, and other components to run applets and applications written in the Java programming language.
+JRE doesn’t contain any development tools such as Java compiler, debugger, JShell, etc.
+   - If you just want to execute a java program, you can install only JRE. You don’t need JDK because there is no development or compilation of java source code is required.
+
+   ![JRE](https://github.com/douaeelh2/Java-Documentation/assets/127549220/30dc98dd-e601-47c5-b516-1fa1cc03797e)
+   
+
+# How to Execute a Java Program
+ ### 1. Writing the Source Code 
+   - Begin by writing your Java program using a text editor or an Integrated Development Environment (IDE) such as Eclipse, Netbeans, or IntelliJ IDEA. Save the Java source code in files with the .java extension.
+
+ ## 2. Compilation:
+   - Compile your Java source code into bytecode using a Java compiler included in the `Java Development Kit (JDK)`. You can compile your code using the `javac` command-line tool or built-in features of an IDE. Compilation converts your Java source code into `.class ` files containing Java bytecode.
+
+## 3. Runtime Environment (JRE)
+   - To execute the Java bytecode, install the `Java Runtime Environment (JRE)`, which includes the `Java Virtual Machine (JVM)` and standard Java class libraries. The JRE provides an environment for executing Java bytecode.
+
+## 4. Running the Program
+   - Once the JRE is installed, run your Java program using the `java` command followed by the name of the class containing the `main()` method in your terminal or command prompt.
+
+
 # Java Basics
-## Variables and Data Types
+## Variables
 
 In Java, **variables** are containers that store data values. Each variable must be declared with a **data type**, which defines the type of value the variable can store.
-
-### 1. **Variables**
 
 A variable in Java has three key components:
 
@@ -61,7 +98,7 @@ A variable in Java has three key components:
 - **Variable Name**: The name of the variable (follows naming conventions).
 - **Value**: The data or value assigned to the variable.
 
-##### Types of Variables
+#### Types of Variables
 
 1. **Local Variables**: Declared inside a method, constructor, or block and are only accessible within that scope.
 2. **Instance Variables**: Declared in a class, but outside a method, constructor, or block. They are non-static and each object has its own copy.
@@ -85,13 +122,13 @@ A variable in Java has three key components:
     }
 ```
 
- ### 2. Data Types
+ ## Data Types
 Java has two main types of data types:
 
 - **Primitive Data Types:** Predefined by the language and store simple values.
 - **Reference Data Types:** Created using classes and store references (addresses) to objects.
   
-#### 1. Primitive Data Types
+### 1. Primitive Data Types
 
 Java provides 8 primitive data types:
 
@@ -136,7 +173,7 @@ Java provides 8 primitive data types:
         }
     }
 ```
-#### 2. Reference Data Types
+### 2. Reference Data Types
 Reference data types include objects, arrays, and strings. These store memory addresses where data is located, rather than the actual value.
 
 - **Class Objects:** Instances of user-defined classes.
@@ -161,7 +198,7 @@ Example:
   }
 ```
 
-3. Type Casting
+### 3. Type Casting
 When assigning values of one type to another, Java provides type casting.
 
 - **Implicit Casting (Widening):** Automatically converts smaller data types to larger ones.
@@ -187,41 +224,6 @@ Example:
 ```
 
 
-
-# What is JDK, JRE and JVM in Java
- ## 1. JDK (Java Development Kit)
-   - The `JDK (Java Development Kit)` is a superset of the JRE and contains everything that is in the JRE, plus tools such as the compiler, debugger, JavaDoc, keytool etc necessary for developing and running Java programs or applications.
-     
-     
-     ![Java JDK JRE and JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/ab43eb26-79a7-4936-8ace-10da5a248a51)
-
- ## 2. JVM (Java Virtual Machine)
-   - The `JVM (Java Virtual Machine)` is a very important component of Java programming language. When you run the Java program, the Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly).
-   - `JVM` is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
-  
-     ![JVM](https://github.com/douaeelh2/Java-Documentation/assets/127549220/2b0cfefd-eae7-405d-8d67-be6492089df4)
-     
-
- ## 3. JRE (Java Runtime Environment)
-   - The `Java Runtime Environment (JRE)` provides the libraries, the Java Virtual Machine, and other components to run applets and applications written in the Java programming language.
-JRE doesn’t contain any development tools such as Java compiler, debugger, JShell, etc.
-   - If you just want to execute a java program, you can install only JRE. You don’t need JDK because there is no development or compilation of java source code is required.
-
-   ![JRE](https://github.com/douaeelh2/Java-Documentation/assets/127549220/30dc98dd-e601-47c5-b516-1fa1cc03797e)
-   
-
-# How to Execute a Java Program
- ### 1. Writing the Source Code 
-   - Begin by writing your Java program using a text editor or an Integrated Development Environment (IDE) such as Eclipse, Netbeans, or IntelliJ IDEA. Save the Java source code in files with the .java extension.
-
- ## 2. Compilation:
-   - Compile your Java source code into bytecode using a Java compiler included in the `Java Development Kit (JDK)`. You can compile your code using the `javac` command-line tool or built-in features of an IDE. Compilation converts your Java source code into `.class ` files containing Java bytecode.
-
-## 3. Runtime Environment (JRE)
-   - To execute the Java bytecode, install the `Java Runtime Environment (JRE)`, which includes the `Java Virtual Machine (JVM)` and standard Java class libraries. The JRE provides an environment for executing Java bytecode.
-
-## 4. Running the Program
-   - Once the JRE is installed, run your Java program using the `java` command followed by the name of the class containing the `main()` method in your terminal or command prompt.
 
 # Java 8 Basics
  ## 1. Lambda Expressions
