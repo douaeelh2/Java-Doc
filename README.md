@@ -98,7 +98,7 @@ A variable in Java has three key components:
 - **Variable Name**: The name of the variable (follows naming conventions).
 - **Value**: The data or value assigned to the variable.
 
-#### Types of Variables
+### Types of Variables
 
 1. **Local Variables**: Declared inside a method, constructor, or block and are only accessible within that scope.
 2. **Instance Variables**: Declared in a class, but outside a method, constructor, or block. They are non-static and each object has its own copy.
@@ -223,6 +223,181 @@ Example:
     }
 ```
 
+
+## Operators
+In Java, operators are special symbols used to perform operations on variables and values. Java provides several types of operators to manipulate data, perform arithmetic calculations, compare values, and more.
+
+### Types of Operators:
+
+**1. Arithmetic Operators**
+**2. Assignment Operators**
+**3. Relational (Comparison) Operators**
+**4. Logical Operators**
+**5. Bitwise Operators**
+**6. Unary Operators**
+**7. Ternary Operator**
+
+### 1. Arithmetic Operators
+Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, etc.
+
+| Operator | Description       | Example    |
+|----------|-------------------|------------|
+| `+`      | Addition           | `a + b`    |
+| `-`      | Subtraction        | `a - b`    |
+| `*`      | Multiplication     | `a * b`    |
+| `/`      | Division           | `a / b`    |
+| `%`      | Modulus (remainder)| `a % b`    |
+
+Example:
+
+```java
+    public class ArithmeticExample {
+      public static void main(String[] args) {
+          int a = 10, b = 5;
+          System.out.println("Addition: " + (a + b));  // 15
+          System.out.println("Subtraction: " + (a - b)); // 5
+          System.out.println("Multiplication: " + (a * b)); // 50
+          System.out.println("Division: " + (a / b)); // 2
+          System.out.println("Modulus: " + (a % b)); // 0
+      }
+  }
+```
+
+### 2. Assignment Operators
+Assignment operators are used to assign values to variables.
+
+| Operator | Description            | Example    |
+|----------|------------------------|------------|
+| `=`      | Assign value            | `a = 10`   |
+| `+=`     | Add and assign          | `a += 5`   |
+| `-=`     | Subtract and assign     | `a -= 5`   |
+| `*=`     | Multiply and assign     | `a *= 5`   |
+| `/=`     | Divide and assign       | `a /= 5`   |
+| `%=`     | Modulus and assign      | `a %= 5`   |
+
+Example:
+
+```java
+     public class AssignmentExample {
+      public static void main(String[] args) {
+          int a = 10;
+          a += 5; // a = a + 5
+          System.out.println("a after += 5: " + a); // 15
+          a *= 2; // a = a * 2
+            System.out.println("a after *= 2: " + a); // 30
+        }
+    }
+```
+
+### 3. Relational (Comparison) Operators
+Relational operators are used to compare two values. They return a boolean result (`true` or `false`).
+
+| Operator | Description            | Example    |
+|----------|------------------------|------------|
+| `==`     | Equal to                | `a == b`   |
+| `!=`     | Not equal to            | `a != b`   |
+| `>`      | Greater than            | `a > b`    |
+| `<`      | Less than               | `a < b`    |
+| `>=`     | Greater than or equal to| `a >= b`   |
+| `<=`     | Less than or equal to   | `a <= b`   |
+
+Example:
+
+```java
+     public class ComparisonExample {
+        public static void main(String[] args) {
+            int a = 10, b = 5;
+            System.out.println("a == b: " + (a == b)); // false
+            System.out.println("a != b: " + (a != b)); // true
+            System.out.println("a > b: " + (a > b)); // true
+            System.out.println("a <= b: " + (a <= b)); // false
+          }
+      }
+```
+
+### 4. Logical Operators
+Logical operators are used to combine two or more conditions. They work with boolean values (true or false).
+
+| Operator | Description                | Example          |
+|----------|----------------------------|------------------|
+| `&&`     | Logical AND                 | `a && b`         |
+| `||`     | Logical OR                  | `a || b`         |
+| `!`      | Logical NOT                 | `!a`             |
+
+
+```java
+    public class LogicalExample {
+        public static void main(String[] args) {
+            boolean a = true, b = false;
+            System.out.println("a && b: " + (a && b)); // false
+            System.out.println("a || b: " + (a || b)); // true
+            System.out.println("!a: " + (!a)); // false
+        }
+    }
+```
+
+### 5. Bitwise Operators
+Bitwise operators are used to perform operations on individual bits of numbers.
+
+| Operator | Description                | Example          |
+|----------|----------------------------|------------------|
+| `&`      | Bitwise AND                 | `a & b`          |
+| `|`      | Bitwise OR                  | `a | b`          |
+| `^`      | Bitwise XOR                 | `a ^ b`          |
+| `~`      | Bitwise Complement          | `~a`             |
+| `<<`     | Left Shift                  | `a << 2`         |
+| `>>`     | Right Shift                 | `a >> 2`         |
+
+```java
+    public class BitwiseExample {
+      public static void main(String[] args) {
+          int a = 5, b = 3;
+          System.out.println("a & b: " + (a & b)); // 1 (Binary: 101 & 011 = 001)
+          System.out.println("a | b: " + (a | b)); // 7 (Binary: 101 | 011 = 111)
+      }
+    }
+```
+
+### 6. Unary Operators
+Unary operators are used with a single operand to perform various operations like incrementing, decrementing, etc.
+
+| Operator | Description                | Example          |
+|----------|----------------------------|------------------|
+| `+`      | Unary plus (positive value) | `+a`             |
+| `-`      | Unary minus (negative value)| `-a`             |
+| `++`     | Increment                   | `a++` or `++a`   |
+| `--`     | Decrement                   | `a--` or `--a`   |
+
+```java
+  public class UnaryExample {
+    public static void main(String[] args) {
+        int a = 10;
+        System.out.println("a++: " + (a++)); // 10 (then a becomes 11)
+        System.out.println("++a: " + (++a)); // 12
+        System.out.println("a--: " + (a--)); // 12 (then a becomes 11)
+    }
+}
+
+```
+
+7. Ternary Operator
+The ternary operator is a shorthand for the if-else statement and works with three operands. It is also called the conditional operator.
+
+| Operator | Description            | Example                      |
+|----------|------------------------|------------------------------|
+| `? :`    | Shorthand for if-else   | `condition ? value1 : value2`|
+
+
+```java
+     public class TernaryExample {
+        public static void main(String[] args) {
+            int a = 10, b = 20;
+            int max = (a > b) ? a : b;
+            System.out.println("Max value: " + max); // 20
+        }
+    }
+
+```
 
 
 # Java 8 Basics
