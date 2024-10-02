@@ -229,13 +229,13 @@ In Java, operators are special symbols used to perform operations on variables a
 
 ### Types of Operators:
 
-**1. Arithmetic Operators**
-**2. Assignment Operators**
-**3. Relational (Comparison) Operators**
-**4. Logical Operators**
-**5. Bitwise Operators**
-**6. Unary Operators**
-**7. Ternary Operator**
+- **1. Arithmetic Operators**
+- **2. Assignment Operators**
+- **3. Relational (Comparison) Operators**
+- **4. Logical Operators**
+- **5. Bitwise Operators**
+- **6. Unary Operators**
+- **7. Ternary Operator**
 
 ### 1. Arithmetic Operators
 Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, etc.
@@ -380,7 +380,7 @@ Unary operators are used with a single operand to perform various operations lik
 
 ```
 
-7. Ternary Operator
+### 7. Ternary Operator
 The ternary operator is a shorthand for the if-else statement and works with three operands. It is also called the conditional operator.
 
 | Operator | Description            | Example                      |
@@ -398,6 +398,7 @@ The ternary operator is a shorthand for the if-else statement and works with thr
     }
 
 ```
+
 
 
 # Java 8 Basics
