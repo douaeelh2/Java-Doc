@@ -399,6 +399,125 @@ The ternary operator is a shorthand for the if-else statement and works with thr
 
 ```
 
+## Control Flow Statements
+Control flow statements in Java are used to dictate the flow of execution of a program based on certain conditions. The two primary control flow statements you asked for are if-else and switch.
+
+### If-Else Statement
+The if-else statement allows you to execute a block of code based on a condition. If the condition evaluates to true, the if block is executed. If the condition is false, the else block (if present) is executed.
+
+Syntax:
+
+```java
+     if (condition) {
+    // Code to execute if condition is true
+    } else {
+        // Code to execute if condition is false
+    }
+```
+
+Example:
+
+```java
+     int age = 18;
+
+    if (age >= 18) {
+        System.out.println("You are an adult.");
+    } else {
+        System.out.println("You are a minor.");
+    }
+```
+
+- Condition: age >= 18 checks if the age is greater than or equal to 18.
+- Output: Since the condition is true, it will print: "You are an adult."
+
+
+**Else-If Ladder:**
+You can chain multiple if conditions using else-if to check multiple possibilities.
+
+```java
+   int score = 75;
+
+    if (score >= 90) {
+        System.out.println("Grade: A");
+    } else if (score >= 80) {
+        System.out.println("Grade: B");
+    } else if (score >= 70) {
+        System.out.println("Grade: C");
+    } else {
+        System.out.println("Grade: F");
+    }
+
+```
+
+### Switch Statement
+The switch statement provides an alternative to the if-else ladder when there are multiple conditions that depend on the value of a single variable. It is often used when you have many potential values for a variable and want to execute different blocks of code for each value.
+
+Syntax:
+
+```java
+    switch (expression) {
+    case value1:
+        // Code to execute if expression matches value1
+        break;
+    case value2:
+        // Code to execute if expression matches value2
+        break;
+    // More cases...
+    default:
+        // Code to execute if none of the cases match
+        break;
+    }
+
+```
+Example : 
+
+```java
+   int day = 3;
+
+    switch (day) {
+        case 1:
+            System.out.println("Monday");
+            break;
+        case 2:
+            System.out.println("Tuesday");
+            break;
+        case 3:
+            System.out.println("Wednesday");
+            break;
+        default:
+            System.out.println("Invalid day");
+            break;
+    }
+```
+
+- Expression: day is evaluated in the switch statement.
+- Output: Since day is 3, the output will be: "Wednesday".
+- The break statement is used to exit the switch block after a case has been executed, preventing fall-through to the next case.
+  
+**Switch with Strings (Java 7 and above):**
+
+```java
+   String fruit = "apple";
+
+  switch (fruit) {
+      case "apple":
+          System.out.println("You selected an apple.");
+          break;
+      case "banana":
+          System.out.println("You selected a banana.");
+          break;
+      default:
+          System.out.println("Unknown fruit.");
+          break;
+  }
+
+```
+- Output: Since the string fruit is "apple", it will print: "You selected an apple."
+
+  ### Key Differences Between if-else and switch:
+- **Conditions:** if-else checks conditions that return a boolean value, whereas switch compares an expression against a set of constant values.
+- **Usage:** switch is usually more efficient when you have many possible values for a single variable, while if-else is more flexible for complex conditions.
+- **Types:** In switch, only certain types are allowed (int, char, String, etc.), while if-else can handle any condition.
 
 
 # Java 8 Basics
