@@ -519,6 +519,157 @@ Example :
 - **Usage:** switch is usually more efficient when you have many possible values for a single variable, while if-else is more flexible for complex conditions.
 - **Types:** In switch, only certain types are allowed (int, char, String, etc.), while if-else can handle any condition.
 
+## Loops
+Loops are control structures that allow you to repeatedly execute a block of code as long as a specified condition is true. Java provides three primary types of loops: `for`, `while`, and `do-while`.
+
+### For Loop
+The for loop is used when you know in advance how many times you want to iterate. It consists of three parts: initialization, condition, and update.
+
+Syntax:
+
+```java
+   for (initialization; condition; update) {
+        // Code to execute
+    }
+```
+
+- Initialization: Initializes the loop control variable.
+- Condition: Checks the condition before each iteration. If true, the loop runs; if false, the loop stops.
+- Update: Updates the loop control variable after each iteration.
+  
+
+```java
+  for (int i = 1; i <= 5; i++) {
+      System.out.println("Iteration: " + i);
+  }
+```
+
+Explanation:
+- The loop starts with i = 1, checks if i <= 5 (condition), and prints the current value of i.
+- After each iteration, i is incremented by 1.
+  
+Output:
+
+```java
+   Iteration: 1
+   Iteration: 2
+   Iteration: 3
+   Iteration: 4
+   Iteration: 5
+```
+
+### Enhanced For Loop (for-each loop):
+- Used to iterate over arrays or collections without using an index.
+
+```java
+   int[] numbers = {1, 2, 3, 4, 5};
+
+    for (int num : numbers) {
+        System.out.println(num);
+    }
+```
+### While Loop
+The while loop checks the condition before executing the loop's body. It continues to iterate as long as the condition remains true.
+
+Syntax:
+
+```java
+   while (condition) {
+        // Code to execute
+    }
+```
+- Condition: The loop executes as long as this condition evaluates to true.
+  
+Example:
+
+```java
+   int i = 1;
+
+    while (i <= 5) {
+        System.out.println("Iteration: " + i);
+        i++;
+    }
+```
+Explanation:
+- The loop runs as long as i <= 5. After each iteration, i is incremented by 1.
+  
+Output:
+
+```java
+   Iteration: 1
+   Iteration: 2
+   Iteration: 3
+   Iteration: 4
+   Iteration: 5
+```
+
+### Do-While Loop
+The do-while loop is similar to the while loop, but it guarantees at least one iteration because the condition is checked after the loop body is executed.
+
+```java
+   do {
+        // Code to execute
+    } while (condition);
+```
+Condition: The loop executes the block of code once, then checks the condition. If the condition is `true`, it continues to loop; otherwise, it stops.
+
+Example:
+
+```java
+   int i = 1;
+
+    do {
+        System.out.println("Iteration: " + i);
+        i++;
+    } while (i <= 5);
+```
+Explanation:
+- The loop prints the value of i at least once, then checks if i <= 5. If true, it continues to iterate.
+  
+Output:
+
+```java
+   Iteration: 1
+   Iteration: 2
+   Iteration: 3
+   Iteration: 4
+   Iteration: 5
+```
+
+**Key Difference from while loop:**
+
+In the `do-while` loop, the block of code executes at least once, even if the condition is initially `false`.
+
+### Loop Control Statements
+Java also provides loop control statements to alter the normal flow of loops:
+
+- `break:` Exits the loop entirely.
+- `continue:` Skips the current iteration and proceeds to the next iteration.
+  
+  Example with break and continue:
+
+ ```java
+      for (int i = 1; i <= 5; i++) {
+        if (i == 3) {
+            continue; // Skip the current iteration when i is 3
+        }
+        if (i == 5) {
+            break; // Exit the loop when i is 5
+        }
+        System.out.println("Iteration: " + i);
+    }
+```
+Explanation:
+- The continue statement skips the iteration where `i == 3`, so it doesn't print "Iteration: 3".
+- The break statement exits the loop when `i == 5`, so the loop stops before it reaches 5.
+Output:
+
+ ```java
+     Iteration: 1
+     Iteration: 2
+     Iteration: 4
+```
+  
 
 # Java 8 Basics
  ## 1. Lambda Expressions
