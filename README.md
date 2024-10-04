@@ -812,7 +812,25 @@ Example: Array of Objects
   int[] partialCopy = Arrays.copyOfRange(original, 1, 4);
   System.out.println(Arrays.toString(partialCopy));  // Output: [2, 3, 4]
 ```
+
 **9. Parallel Sorting:** The Arrays.parallelSort() method sorts large arrays more efficiently by using multiple threads in parallel.
+
+```java
+  int[] numbers = {9, 4, 6, 1, 7};
+  Arrays.parallelSort(numbers);
+  System.out.println(Arrays.toString(numbers));  // Output: [1, 4, 6, 7, 9]
+```
+
+**10. Checking if Two Multi-dimensional Arrays are Equal:** For multi-dimensional arrays, `Arrays.deepEquals()` checks for deep equality.
+
+
+```java
+  int[][] matrix1 = {{1, 2}, {3, 4}};
+  int[][] matrix2 = {{1, 2}, {3, 4}};
+  boolean areEqual = Arrays.deepEquals(matrix1, matrix2);
+  System.out.println(areEqual);  // Output: true
+```
+
 ```java
    int[] numbers = {1, 2, 3, 4, 5};
    System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
@@ -829,14 +847,76 @@ Example: Array of Objects
    int[] numbers = {1, 2, 3, 4, 5};
    System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
 ```
-```java
-   int[] numbers = {1, 2, 3, 4, 5};
-   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
-```
-```java
-   int[] numbers = {1, 2, 3, 4, 5};
-   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
-```
+
+### Summary of Common Arrays Functions
+
+| **Function**                           | **Description**                                | **Example**                           |
+|----------------------------------------|------------------------------------------------|---------------------------------------|
+| `sort(array)`                          | Sorts the array in ascending order             | `Arrays.sort(array);`                 |
+| `binarySearch(array, key)`             | Searches for key in a sorted array             | `Arrays.binarySearch(array, 3);`      |
+| `fill(array, value)`                   | Fills the entire array with value              | `Arrays.fill(array, 0);`              |
+| `copyOf(array, length)`                | Copies the array into a new array              | `Arrays.copyOf(array, 5);`            |
+| `equals(array1, array2)`               | Checks if two arrays are equal                 | `Arrays.equals(arr1, arr2);`          |
+| `toString(array)`                      | Converts the array to a string                 | `Arrays.toString(array);`             |
+| `deepToString(array)`                  | Converts a multi-dimensional array to a string | `Arrays.deepToString(matrix);`        |
+| `copyOfRange(array, start, end)`       | Copies a range of the array                    | `Arrays.copyOfRange(arr, 0, 3);`      |
+| `parallelSort(array)`                  | Sorts the array using multiple threads         | `Arrays.parallelSort(arr);`           |
+| `deepEquals(array1, array2)`           | Checks if two multi-dimensional arrays are equal| `Arrays.deepEquals(matrix1, matrix2);`|
+
+### Difference between Table and ArrayList in Java
+
+In Java, a **Table** (often referring to two-dimensional arrays or hash tables) and an **ArrayList** have distinct characteristics and purposes. Here's a breakdown of their key differences:
+
+| **Feature**            | **Table (2D Array or HashTable)**                                                                 | **ArrayList**                                                                                 |
+|------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| **Type**               | Array (fixed-size) or `HashTable` (for key-value pairs).                                          | Dynamic array (part of Java's `List` interface, resizable).                                   |
+| **Size**               | Fixed at the time of creation (for arrays).                                                       | Resizable, grows or shrinks dynamically.                                                      |
+| **Data Structure**     | 2D Array: Static array structure.<br>HashTable: Key-value pair structure.                         | Implements a dynamic array, can grow or shrink as needed.                                     |
+| **Performance**        | Accessing elements by index is very fast (O(1) for arrays).                                       | Accessing elements is also O(1), but resizing operations (like adding elements) take O(n).    |
+| **Storage Type**       | Stores elements of the same data type (for arrays).                                               | Can store objects of any data type (generic, `ArrayList<Type>`).                              |
+| **Memory Allocation**  | Memory is allocated at the time of creation and cannot be changed for arrays.                     | Memory is allocated dynamically and expands when needed.                                      |
+| **Efficiency**         | Fixed-size, hence less memory overhead (arrays).                                                  | More flexible, but resizing may involve overhead (copying elements to a new larger array).     |
+| **Type Safety**        | Arrays are strongly typed, meaning the data type of elements is fixed at compile time.            | ArrayList is generic, meaning you can define the type (`ArrayList<String>`, `ArrayList<Integer>`, etc.). |
+| **Multi-dimensional**  | Arrays can be multi-dimensional (e.g., 2D or 3D arrays).                                          | ArrayLists are single-dimensional, but can contain other lists to simulate multidimensional arrays. |
+| **Initialization**     | Arrays must be initialized with a fixed size when created (e.g., `int[3][3]` or `new int[5]`).    | ArrayList grows dynamically as elements are added (e.g., `new ArrayList<Integer>()`).          |
+| **Methods and Utilities** | Arrays have limited built-in methods. (Use `Arrays` class for utility methods like sorting).   | ArrayList has built-in methods such as `add()`, `remove()`, `size()`, `clear()`, etc.         |
+| **Null Values**        | Can contain `null` values (for arrays and hash tables).                                           | Can also contain `null` values in `ArrayList`.                                                |
+
+### Key Points:
+
+#### **Table (2D Array or HashTable)**
+1. **2D Array Example**: 
+   - A table in Java can refer to a two-dimensional array, where each "row" is an array, and each "column" contains elements of the same type.
+   - Example: 
+     ```java
+       int[][] table = {
+           {1, 2, 3},
+           {4, 5, 6},
+           {7, 8, 9}
+       };
+     ```
+
+2. **HashTable Example**:
+   - A `HashTable` is a collection of key-value pairs that maps keys to values. It is synchronized, but largely replaced by `HashMap` due to better performance.
+   - Example:
+     
+     ```java
+       Hashtable<String, Integer> hashtable = new Hashtable<>();
+       hashtable.put("Alice", 30);
+       hashtable.put("Bob", 25);
+     ```
+
+#### **ArrayList**
+- An `ArrayList` is a resizable array in Java, which allows dynamic memory allocation. It can store objects of any type using generics and has built-in methods for common operations (e.g., adding, removing elements).
+- Example:
+   ```java
+       ArrayList<String> fruits = new ArrayList<>();
+       fruits.add("Apple");
+       fruits.add("Banana");
+       fruits.add("Orange");
+       
+       System.out.println(fruits.get(0)); // Output: Apple
+    ```
 
 # Java 8 Basics
  ## 1. Lambda Expressions
