@@ -823,29 +823,11 @@ Example: Array of Objects
 
 **10. Checking if Two Multi-dimensional Arrays are Equal:** For multi-dimensional arrays, `Arrays.deepEquals()` checks for deep equality.
 
-
 ```java
   int[][] matrix1 = {{1, 2}, {3, 4}};
   int[][] matrix2 = {{1, 2}, {3, 4}};
   boolean areEqual = Arrays.deepEquals(matrix1, matrix2);
   System.out.println(areEqual);  // Output: true
-```
-
-```java
-   int[] numbers = {1, 2, 3, 4, 5};
-   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
-```
-```java
-   int[] numbers = {1, 2, 3, 4, 5};
-   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
-```
-```java
-   int[] numbers = {1, 2, 3, 4, 5};
-   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
-```
-```java
-   int[] numbers = {1, 2, 3, 4, 5};
-   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
 ```
 
 ### Summary of Common Arrays Functions
