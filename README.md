@@ -679,13 +679,13 @@ An array is declared by specifying the type of its elements and the array size. 
 ```java
    int[] numbers = new int[5];  // Declares an array of 5 integers
 ```
-Alternatively, you can initialize the array directly with values:
+Example 1 : Array of Numbers
 
 ```java
    int[] numbers = {1, 2, 3, 4, 5};  // Initializes the array with values
 ```
 
-Here's another example demonstrating how to declare and initialize an array of strings.
+Example 2: Array of Strings
 
 ```java
     // Declare and initialize an array of strings
@@ -707,7 +707,7 @@ Here's another example demonstrating how to declare and initialize an array of s
     // Mango
     // Grapes
 ```
-Example: Array of Objects
+Example 3: Array of Objects
 
 ```java
     // Define the Person class
@@ -869,7 +869,8 @@ In Java, a **Table** (often referring to two-dimensional arrays or hash tables) 
 #### **Table (2D Array or HashTable)**
 1. **2D Array Example**: 
    - A table in Java can refer to a two-dimensional array, where each "row" is an array, and each "column" contains elements of the same type.
-   - Example: 
+   - Example:
+     
      ```java
        int[][] table = {
            {1, 2, 3},
@@ -890,7 +891,9 @@ In Java, a **Table** (often referring to two-dimensional arrays or hash tables) 
 
 #### **ArrayList**
 - An `ArrayList` is a resizable array in Java, which allows dynamic memory allocation. It can store objects of any type using generics and has built-in methods for common operations (e.g., adding, removing elements).
+  
 - Example:
+  
    ```java
        ArrayList<String> fruits = new ArrayList<>();
        fruits.add("Apple");
@@ -899,6 +902,87 @@ In Java, a **Table** (often referring to two-dimensional arrays or hash tables) 
        
        System.out.println(fruits.get(0)); // Output: Apple
     ```
+
+  ## String Manipulation
+  
+Strings in Java are objects that represent sequences of characters. Java provides a variety of built-in methods for manipulating strings. Here are some common operations for string manipulation:
+
+
+### 1. Creating Strings
+Strings can be created using string literals or the String constructor:
+
+ ```java
+     String str1 = "Hello, World!"; // String literal
+     String str2 = new String("Hello, World!"); // String constructor
+  ```
+
+### 2. Common String Methods
+
+| **Method**                     | **Description**                                      | **Example**                                         |
+|--------------------------------|------------------------------------------------------|-----------------------------------------------------|
+| `length()`                     | Returns the length of the string.                    | `str1.length();`  // Returns 13                     |
+| `charAt(int index)`           | Returns the character at the specified index.        | `str1.charAt(0);`  // Returns 'H'                   |
+| `substring(int beginIndex)`    | Returns a substring starting from the specified index. | `str1.substring(7);` // Returns "World!"            |
+| `substring(int beginIndex, int endIndex)` | Returns a substring from the specified range. | `str1.substring(0, 5);` // Returns "Hello"          |
+| `indexOf(String str)`         | Returns the index of the first occurrence of the specified substring. | `str1.indexOf("World");` // Returns 7          |
+| `lastIndexOf(String str)`     | Returns the index of the last occurrence of the specified substring. | `str1.lastIndexOf("o");` // Returns 8          |
+| `toLowerCase()`               | Converts all characters to lowercase.                 | `str1.toLowerCase();` // Returns "hello, world!"   |
+| `toUpperCase()`               | Converts all characters to uppercase.                 | `str1.toUpperCase();` // Returns "HELLO, WORLD!"   |
+| `trim()`                      | Removes leading and trailing whitespace.               | `str1.trim();` // Removes spaces if present         |
+| `replace(char oldChar, char newChar)` | Replaces occurrences of a character with another. | `str1.replace('o', 'a');` // Returns "Hella, Warld!" |
+| `split(String regex)`         | Splits the string into an array based on a regex.     | `str1.split(",");` // Returns array `["Hello", " World!"]` |
+
+
+### 3. Concatenating Strings
+
+Strings can be concatenated using the `+` operator or the `concat()` method:
+
+ ```java
+    String firstName = "John";
+    String lastName = "Doe";
+    String fullName = firstName + " " + lastName; // Using + operator
+    // or
+    String fullName2 = firstName.concat(" ").concat(lastName); // Using concat() method
+  ```
+
+### 4. StringBuilder and StringBuffer
+
+For more efficient string manipulation, especially in loops, it’s better to use StringBuilder or StringBuffer:
+
+- **StringBuilder:** Not synchronized, faster for single-threaded operations.
+- **StringBuffer:** Synchronized, thread-safe but slower than StringBuilder.
+  
+Example of StringBuilder:
+
+ ```java
+     StringBuilder sb = new StringBuilder();
+    sb.append("Hello");
+    sb.append(", ");
+    sb.append("World!");
+    String result = sb.toString(); // Returns "Hello, World!"
+  ```
+
+### 5. Formatting Strings
+
+You can format strings using the `String.format()` method or `System.out.printf()` for console output:
+
+ ```java
+     String name = "Alice";
+    int age = 30;
+    String formatted = String.format("%s is %d years old.", name, age); // Returns "Alice is 30 years old."
+    System.out.println(formatted);
+  ```
+
+### 6. Checking String Equality
+Strings can be compared using the `equals()` method or `equalsIgnoreCase()` for case-insensitive comparisons:
+
+ ```java
+    String strA = "Hello";
+    String strB = "hello";
+    boolean isEqual = strA.equals(strB); // Returns false
+    boolean isEqualIgnoreCase = strA.equalsIgnoreCase(strB); // Returns true
+  ```
+
 
 # Java 8 Basics
  ## 1. Lambda Expressions
