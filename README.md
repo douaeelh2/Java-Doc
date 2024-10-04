@@ -903,7 +903,7 @@ In Java, a **Table** (often referring to two-dimensional arrays or hash tables) 
        System.out.println(fruits.get(0)); // Output: Apple
     ```
 
-  ## String Manipulation
+## String Manipulation
   
 Strings in Java are objects that represent sequences of characters. Java provides a variety of built-in methods for manipulating strings. Here are some common operations for string manipulation:
 
