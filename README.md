@@ -669,6 +669,119 @@ Output:
      Iteration: 2
      Iteration: 4
 ```
+
+## Arrays
+In Java, arrays are fundamental data structures that hold multiple values of the same type. Java provides various utility methods in the java.util.Arrays class to operate on arrays. These methods allow us to perform operations such as sorting, searching, filling, and comparing arrays with ease.
+
+### Declaring and Initializing Arrays
+An array is declared by specifying the type of its elements and the array size. You can initialize it at the time of declaration or later.
+
+```java
+   int[] numbers = new int[5];  // Declares an array of 5 integers
+```
+Alternatively, you can initialize the array directly with values:
+
+```java
+   int[] numbers = {1, 2, 3, 4, 5};  // Initializes the array with values
+```
+
+Here's another example demonstrating how to declare and initialize an array of strings.
+
+```java
+    // Declare and initialize an array of strings
+    String[] fruits = {"Apple", "Banana", "Orange", "Mango", "Grapes"};
+    
+    // Accessing elements in the array
+    System.out.println(fruits[0]);  // Output: Apple
+    System.out.println(fruits[3]);  // Output: Mango
+    
+    // Looping through the array
+    for (String fruit : fruits) {
+        System.out.println(fruit);
+    }
+    
+    // Output:
+    // Apple
+    // Banana
+    // Orange
+    // Mango
+    // Grapes
+```
+Example: Array of Objects
+
+```java
+    // Define the Person class
+    class Person {
+        String name;
+        int age;
+    
+        // Constructor
+        Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+    
+        // Method to display person details
+        void display() {
+            System.out.println("Name: " + name + ", Age: " + age);
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            // Declare and initialize an array of Person objects
+            Person[] people = new Person[3];
+    
+            // Initialize each element with a new Person object
+            people[0] = new Person("Alice", 30);
+            people[1] = new Person("Bob", 25);
+            people[2] = new Person("Charlie", 28);
+    
+            // Access and display the details of each person in the array
+            for (Person person : people) {
+                person.display();
+            }
+        }
+    }
+
+```
+### Common Array Functions from java.util.Arrays
+
+- Sorting an Array: The `Arrays.sort()` method is used to sort arrays in ascending order. It can sort primitive arrays (like `int[]`) and object arrays (like `String[]`).
+
+```java
+     import java.util.Arrays;
+
+    int[] numbers = {5, 2, 9, 1, 7};
+    Arrays.sort(numbers);  // Sorts the array in ascending order
+    System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 5, 7, 9]
+```
+
+```java
+     Iteration: 1
+     Iteration: 2
+     Iteration: 4
+```
+```java
+     Iteration: 1
+     Iteration: 2
+     Iteration: 4
+```
+```java
+     Iteration: 1
+     Iteration: 2
+     Iteration: 4
+```
+```java
+     Iteration: 1
+     Iteration: 2
+     Iteration: 4
+```
+```java
+     Iteration: 1
+     Iteration: 2
+     Iteration: 4
+```
   
 
 # Java 8 Basics
