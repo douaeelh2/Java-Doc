@@ -928,9 +928,27 @@ Strings can be created using string literals or the String constructor:
 | `lastIndexOf(String str)`     | Returns the index of the last occurrence of the specified substring. | `str1.lastIndexOf("o");` // Returns 8          |
 | `toLowerCase()`               | Converts all characters to lowercase.                 | `str1.toLowerCase();` // Returns "hello, world!"   |
 | `toUpperCase()`               | Converts all characters to uppercase.                 | `str1.toUpperCase();` // Returns "HELLO, WORLD!"   |
-| `trim()`                      | Removes leading and trailing whitespace.               | `str1.trim();` // Removes spaces if present         |
+| `trim()`                      | Removes leading and trailing whitespace.              | `str1.trim();` // Removes spaces if present         |
 | `replace(char oldChar, char newChar)` | Replaces occurrences of a character with another. | `str1.replace('o', 'a');` // Returns "Hella, Warld!" |
 | `split(String regex)`         | Splits the string into an array based on a regex.     | `str1.split(",");` // Returns array `["Hello", " World!"]` |
+| `startsWith(String prefix)`    | Checks if the string starts with the specified prefix. | `"Java".startsWith("Ja");` // Returns `true`        |
+| `endsWith(String suffix)`      | Checks if the string ends with the specified suffix.  | `"Java".endsWith("va");` // Returns `true`          |
+| `contains(CharSequence seq)`   | Checks if the string contains the specified sequence. | `"Java".contains("av");` // Returns `true`          |
+| `equalsIgnoreCase(String str)` | Compares two strings, ignoring case differences.      | `"java".equalsIgnoreCase("Java");` // Returns `true`|
+| `isEmpty()`                    | Checks if the string is empty (length = 0).           | `"".isEmpty();` // Returns `true`                   |
+| `join(CharSequence delimiter, CharSequence... elements)` | Joins multiple strings with a delimiter. | `String.join("-", "2023", "10", "05");` // Returns `"2023-10-05"` |
+| `matches(String regex)`        | Checks if the string matches a regular expression.    | `"abc123".matches("[a-z]+[0-9]+");` // Returns `true`|
+| `replaceAll(String regex, String replacement)` | Replaces all matches of a regex with a replacement. | `"abc123".replaceAll("\\d", "#");` // Returns `"abc###"` |
+| `replaceFirst(String regex, String replacement)` | Replaces the first match of a regex with a replacement. | `"abc123".replaceFirst("\\d", "#");` // Returns `"abc#23"` |
+| `repeat(int count)`            | Repeats the string a specified number of times.       | `"Hello".repeat(3);` // Returns `"HelloHelloHello"`|
+| `strip()`                      | Removes leading and trailing whitespace (introduced in Java 11). | `"  Hello  ".strip();` // Returns `"Hello"`        |
+| `stripLeading()`               | Removes leading whitespace only.                     | `"  Hello  ".stripLeading();` // Returns `"Hello  "`|
+| `stripTrailing()`              | Removes trailing whitespace only.                    | `"  Hello  ".stripTrailing();` // Returns `"  Hello"`|
+| `compareTo(String anotherString)` | Compares two strings lexicographically.            | `"abc".compareTo("def");` // Returns a negative number |
+| `concat(String str)`           | Concatenates the specified string to the end of the current string. | `"Hello".concat(" World");` // Returns `"Hello World"` |
+| `codePointAt(int index)`       | Returns the Unicode code point at the specified index.| `"A".codePointAt(0);` // Returns `65` (Unicode for 'A') |
+| `intern()`                     | Returns a canonical representation of the string.    | `"Hello".intern();` // Interns the string for memory efficiency|
+
 
 
 ### 3. Concatenating Strings
