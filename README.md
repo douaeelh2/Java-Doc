@@ -747,7 +747,7 @@ Example: Array of Objects
 ```
 ### Common Array Functions from java.util.Arrays
 
-- Sorting an Array: The `Arrays.sort()` method is used to sort arrays in ascending order. It can sort primitive arrays (like `int[]`) and object arrays (like `String[]`).
+**1. Sorting an Array:** The `Arrays.sort()` method is used to sort arrays in ascending order. It can sort primitive arrays (like `int[]`) and object arrays (like `String[]`).
 
 ```java
      import java.util.Arrays;
@@ -756,33 +756,87 @@ Example: Array of Objects
     Arrays.sort(numbers);  // Sorts the array in ascending order
     System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 5, 7, 9]
 ```
+**2. Binary Search:** The `Arrays.binarySearch()` method is used to search for a specific element in a sorted array. It returns the index of the element if found; otherwise, it returns a negative value.
 
 ```java
-     Iteration: 1
-     Iteration: 2
-     Iteration: 4
+    int[] numbers = {1, 2, 3, 4, 5};
+    int index = Arrays.binarySearch(numbers, 3);
+    System.out.println(index);  // Output: 2 (index of element 3)
+```
+- Note: The array must be sorted before using binarySearch().
+
+**3. Filling an Array:** The `Arrays.fill()` method fills all elements of an array with a specific value.
+
+```java
+    int[] numbers = new int[5];
+    Arrays.fill(numbers, 10);  // Fills the array with the value 10
+    System.out.println(Arrays.toString(numbers));  // Output: [10, 10, 10, 10, 10]
+```
+
+**4. Copying Arrays:** The `Arrays.copyOf()` method allows you to create a new array by copying the elements of an existing array.
+
+```java
+    int[] original = {1, 2, 3, 4, 5};
+    int[] copy = Arrays.copyOf(original, original.length);
+    System.out.println(Arrays.toString(copy));  // Output: [1, 2, 3, 4, 5]
+```
+- You can specify the new array's length in `Arrays.copyOf()`, which allows you to either truncate or extend the original array.
+
+**5. Comparing Arrays:** The Arrays.equals() method checks if two arrays are equal (i.e., have the same length and elements in the same order).
+
+```java
+    int[] numbers1 = {1, 2, 3};
+    int[] numbers2 = {1, 2, 3};
+    boolean areEqual = Arrays.equals(numbers1, numbers2);
+    System.out.println(areEqual);  // Output: true
+```
+
+**6. Converting Array to String:** The `Arrays.toString()` method returns a string representation of the array.
+
+```java
+   int[] numbers = {1, 2, 3, 4, 5};
+   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
+```
+
+**7. Converting Multi-dimensional Arrays to String:** For multi-dimensional arrays, you can use Arrays.deepToString() to get a string representation.
+
+```java
+  int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+  System.out.println(Arrays.deepToString(matrix));  // Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+```
+
+**8. Copying Part of an Array:** The `Arrays.copyOfRange()` method allows copying a portion of an array.
+
+```java
+  int[] original = {1, 2, 3, 4, 5};
+  int[] partialCopy = Arrays.copyOfRange(original, 1, 4);
+  System.out.println(Arrays.toString(partialCopy));  // Output: [2, 3, 4]
+```
+**9. Parallel Sorting:** The Arrays.parallelSort() method sorts large arrays more efficiently by using multiple threads in parallel.
+```java
+   int[] numbers = {1, 2, 3, 4, 5};
+   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
 ```
 ```java
-     Iteration: 1
-     Iteration: 2
-     Iteration: 4
+   int[] numbers = {1, 2, 3, 4, 5};
+   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
 ```
 ```java
-     Iteration: 1
-     Iteration: 2
-     Iteration: 4
+   int[] numbers = {1, 2, 3, 4, 5};
+   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
 ```
 ```java
-     Iteration: 1
-     Iteration: 2
-     Iteration: 4
+   int[] numbers = {1, 2, 3, 4, 5};
+   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
 ```
 ```java
-     Iteration: 1
-     Iteration: 2
-     Iteration: 4
+   int[] numbers = {1, 2, 3, 4, 5};
+   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
 ```
-  
+```java
+   int[] numbers = {1, 2, 3, 4, 5};
+   System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 3, 4, 5]
+```
 
 # Java 8 Basics
  ## 1. Lambda Expressions
