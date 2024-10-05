@@ -1001,6 +1001,36 @@ Strings can be compared using the `equals()` method or `equalsIgnoreCase()` for 
     boolean isEqualIgnoreCase = strA.equalsIgnoreCase(strB); // Returns true
   ```
 
+### 7. Extracting String
+The substring() method in Java is used to extract a portion of a string based on specified indices. There are two common forms of the method:
+
+- `substring(int beginIndex):` Returns a substring starting from the given index up to the end of the string.
+- `substring(int beginIndex, int endIndex):` Returns a substring starting from the `beginIndex` and ending right before the `endIndex` (exclusive of endIndex).
+
+Example:
+
+ ```java
+     public class SubstringExample {
+      public static void main(String[] args) {
+          String str = "Hello, World!";
+  
+          // Example 1: Using substring(int beginIndex)
+          String result1 = str.substring(7);
+          System.out.println(result1);  // Output: World!
+  
+          // Example 2: Using substring(int beginIndex, int endIndex)
+          String result2 = str.substring(0, 5);
+          System.out.println(result2);  // Output: Hello
+  
+          // Example 3: Extracting a portion of the string
+          String result3 = str.substring(7, 12);
+              System.out.println(result3);  // Output: World
+          }
+      }
+  ```
+- `str.substring(7)` extracts the substring starting from index `7`, which is `"World!"`.
+- `str.substring(0, 5)` extracts characters from index `0` to `4` (excluding `5`), which is `"Hello"`.
+- `str.substring(7, 12)` extracts characters from index `7` to `11`, resulting in `"World"`.
 
 # Java 8 Basics
  ## 1. Lambda Expressions
